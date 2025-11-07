@@ -1,0 +1,214 @@
+import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, TrendingUp, Users, Target } from 'lucide-react';
+import { Card } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { FloatingShapes } from '../components/FloatingShapes';
+import { GradientBackground } from '../components/GradientBackground';
+import { SEO } from '../components/SEO';
+import { breadcrumbSchema, faqSchema } from '../utils/seo/schemas';
+
+export function CaseStudiesPage() {
+  const pageSchema = breadcrumbSchema([
+    { name: 'Accueil', url: 'https://boostactivity.fr' },
+    { name: 'Études de cas', url: 'https://boostactivity.fr/case-studies' },
+  ]);
+
+  const faq = faqSchema([
+    {
+      question: 'Quels résultats avez-vous obtenus pour vos clients ?',
+      answer: 'Nos clients ont obtenu une croissance moyenne de +280%, avec des résultats concrets : +180% de réservations pour La Belle Table, 68K€ de CA en 4 mois pour Élégance Fashion, et 520K€ de pipeline pour Stratégie Plus.',
+    },
+    {
+      question: 'Combien de temps faut-il pour voir des résultats ?',
+      answer: 'Les premiers résultats apparaissent généralement entre 30 et 90 jours selon le service. Le SEO nécessite 3-6 mois, tandis que les publicités en ligne peuvent générer des résultats dès les premières semaines.',
+    },
+  ]);
+
+  const combinedSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [pageSchema, faq],
+  };
+
+  return (
+    <div className="bg-white">
+      <SEO
+        title="Études de Cas Marketing Digital - Résultats Clients | Boost Activity"
+        description="Découvrez nos success stories : +180% de réservations, 68K€ de CA, 520K€ de pipeline. Études de cas détaillées de nos clients en restaurant, e-commerce, fitness, immobilier."
+        keywords="études de cas marketing digital, success stories, résultats clients, croissance restaurant, e-commerce, fitness, immobilier"
+        ogImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+        canonical="https://boostactivity.fr/case-studies"
+        schema={combinedSchema}
+      />
+      {/* Hero Section */}
+      <section className="relative min-h-[70vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+        <GradientBackground variant="cases-hero" opacity={0.6} />
+        <FloatingShapes />
+        <div className="max-w-[1000px] mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <h1 className="text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
+              <span className="gradient-text-animated">Études de cas</span>
+            </h1>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
+          >
+            Découvrez comment nous avons aidé nos clients à atteindre et dépasser leurs objectifs de croissance digitale.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Stats Overview */}
+      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+        <GradientBackground variant="cases-content" opacity={0.48} />
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: TrendingUp, label: 'Croissance moyenne', value: '+280%' },
+              { icon: Users, label: 'Clients accompagnés', value: '165+' },
+              { icon: Target, label: 'Taux de réussite', value: '100%' },
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="p-8 text-center border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
+                  <div className="absolute inset-0 card-hover-cases-stats">
+                  </div>
+                  <div className="relative z-10">
+                    <stat.icon className="w-10 h-10 text-gray-800 mx-auto mb-4" />
+                    <div className="text-[48px] tracking-tight gradient-text-animated mb-2">{stat.value}</div>
+                    <div className="text-[14px] text-gray-600">{stat.label}</div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+        <GradientBackground variant="cases-content" opacity={0.48} />
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
+              <motion.div
+                key={study.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Link to={`/case-studies/${study.slug}`}>
+                  <Card className="overflow-hidden h-full transition-all duration-500 border-gray-200 bg-white/80 backdrop-blur-sm group relative hover:shadow-lg">
+                    <div className="absolute inset-0 card-hover-cases-grid">
+                    </div>
+                    
+                    <div className="relative z-10">
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <ImageWithFallback
+                          src={study.image}
+                          alt={study.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      <div className="p-8">
+                        <div className="flex items-center gap-2 mb-4">
+                          <Badge variant="secondary" className="text-[12px]">
+                            {study.category}
+                          </Badge>
+                        </div>
+                        
+                        <h3 className="text-[32px] tracking-tight gradient-text-animated mb-3">
+                          {study.title}
+                        </h3>
+                        
+                        <p className="text-[16px] text-gray-600 mb-4">
+                          {study.challenge}
+                        </p>
+                        
+                        <div className="text-[21px] tracking-tight text-black mb-6">
+                          {study.result}
+                        </div>
+                        
+                        <div className="grid grid-cols-3 gap-4 mb-6 py-6 border-t border-b border-gray-200">
+                          {study.metrics.map((metric) => (
+                            <div key={metric.label} className="text-center">
+                              <div className="text-[24px] tracking-tight gradient-text-animated mb-1">
+                                {metric.value}
+                              </div>
+                              <div className="text-[12px] text-gray-600">
+                                {metric.label}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {study.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="text-[12px] text-gray-600 bg-gray-100 px-3 py-1 rounded-full"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <div className="flex items-center text-[14px] text-black">
+                          Lire l'étude complète <ArrowRight className="ml-2 w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+        <GradientBackground variant="cases-cta" opacity={0.58} />
+        <div className="max-w-[1000px] mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+              <span className="gradient-text-animated">Écrivons ensemble</span>
+              <br />
+              <span className="text-black">votre </span>
+              <span className="gradient-text-animated">success story</span>
+            </h2>
+            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+              Rejoignez les entreprises qui ont choisi Boost Activity pour accélérer leur croissance.
+            </p>
+            <Link to="/contact">
+              <button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+                Démarrer votre projet
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

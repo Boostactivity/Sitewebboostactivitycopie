@@ -1,0 +1,1234 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  
+  /* ===== PALETTE PRINCIPALE - Couleurs de marque ===== */
+  
+  /* Bleu indigo profond (confiance, technologie, professionnalisme) */
+  --primary: oklch(0.35 0.15 270);
+  --primary-foreground: oklch(1 0 0);
+  --primary-light: oklch(0.92 0.05 270);
+  
+  /* Violet/Pourpre (innovation, créativité, transformation) */
+  --accent-purple: oklch(0.65 0.12 290);
+  --accent-purple-light: oklch(0.90 0.08 290);
+  
+  /* Vert émeraude (croissance, succès, prospérité) */
+  --success: oklch(0.65 0.10 160);
+  --success-light: oklch(0.92 0.06 160);
+  
+  /* Orange (action, optimisme, boost) */
+  --energy: oklch(0.75 0.10 50);
+  --energy-light: oklch(0.94 0.06 50);
+  
+  /* ===== PALETTES PAR PAGE - Psychologie des couleurs ===== */
+  
+  /* HomePage - Multi-couleurs (Vision, Innovation, Croissance) */
+  --home-indigo: oklch(0.60 0.12 270);
+  --home-indigo-light: oklch(0.92 0.05 270);
+  --home-purple: oklch(0.65 0.12 290);
+  --home-purple-light: oklch(0.90 0.08 290);
+  --home-teal: oklch(0.68 0.10 180);
+  --home-teal-light: oklch(0.93 0.04 180);
+  
+  /* AboutPage - Passion, Équipe, Chaleur Humaine */
+  --about-coral: oklch(0.78 0.05 35);
+  --about-coral-light: oklch(0.92 0.06 35);
+  --about-rose: oklch(0.82 0.04 15);
+  --about-rose-light: oklch(0.93 0.05 15);
+  --about-amber: oklch(0.82 0.05 65);
+  --about-amber-light: oklch(0.93 0.06 65);
+  
+  /* ServicesPage - Professionnalisme, Expertise */
+  --services-indigo: oklch(0.65 0.10 260);
+  --services-indigo-light: oklch(0.93 0.04 260);
+  --services-teal: oklch(0.70 0.08 180);
+  --services-teal-light: oklch(0.93 0.04 180);
+  --services-sky: oklch(0.75 0.07 220);
+  --services-sky-light: oklch(0.95 0.03 220);
+  
+  /* SolutionsPage - Innovation & Transformation */
+  --solutions-violet: oklch(0.68 0.11 290);
+  --solutions-violet-light: oklch(0.94 0.05 290);
+  --solutions-cyan: oklch(0.72 0.08 200);
+  --solutions-cyan-light: oklch(0.94 0.04 200);
+  
+  /* CaseStudiesPage - Succès, Résultats */
+  --cases-emerald: oklch(0.72 0.09 150);
+  --cases-emerald-light: oklch(0.92 0.05 150);
+  --cases-gold: oklch(0.78 0.08 80);
+  --cases-gold-light: oklch(0.94 0.05 80);
+  --cases-mint: oklch(0.82 0.06 160);
+  --cases-mint-light: oklch(0.95 0.04 160);
+  
+  /* PricingPage - Valeur & Investissement */
+  --pricing-purple: oklch(0.68 0.10 285);
+  --pricing-purple-light: oklch(0.94 0.05 285);
+  --pricing-lavender: oklch(0.75 0.08 295);
+  --pricing-lavender-light: oklch(0.95 0.04 295);
+  --pricing-lime: oklch(0.78 0.08 120);
+  --pricing-lime-light: oklch(0.96 0.04 120);
+  
+  /* ContactPage - Action, Engagement */
+  --contact-azure: oklch(0.72 0.08 230);
+  --contact-azure-light: oklch(0.92 0.05 230);
+  --contact-orange: oklch(0.76 0.09 45);
+  --contact-orange-light: oklch(0.94 0.06 45);
+  
+  /* ResourcesPage - Apprentissage, Savoir */
+  --resources-amber: oklch(0.78 0.09 60);
+  --resources-amber-light: oklch(0.94 0.06 60);
+  --resources-blue: oklch(0.70 0.08 240);
+  --resources-blue-light: oklch(0.92 0.05 240);
+  
+  /* LegalPage - Sérieux, Conformité */
+  --legal-slate: oklch(0.55 0.06 250);
+  --legal-slate-light: oklch(0.85 0.04 250);
+  --legal-navy: oklch(0.45 0.12 260);
+  --legal-navy-light: oklch(0.82 0.08 260);
+  
+  /* ===== COULEURS UI ===== */
+  
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  
+  --secondary: oklch(0.96 0.01 270);
+  --secondary-foreground: oklch(0.25 0.10 270);
+  
+  --muted: oklch(0.95 0.005 270);
+  --muted-foreground: oklch(0.45 0.02 270);
+  
+  --accent: oklch(0.90 0.08 270);
+  --accent-foreground: oklch(0.25 0.12 270);
+  
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: #ffffff;
+  
+  --border: oklch(0.88 0.01 270);
+  --input: transparent;
+  --input-background: oklch(0.97 0.005 270);
+  --switch-background: oklch(0.80 0.02 270);
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  --ring: oklch(0.55 0.25 290);
+  
+  /* Charts */
+  --chart-1: oklch(0.55 0.25 290);
+  --chart-2: oklch(0.55 0.20 160);
+  --chart-3: oklch(0.35 0.15 270);
+  --chart-4: oklch(0.70 0.22 50);
+  --chart-5: oklch(0.60 0.20 200);
+  
+  --radius: 0.75rem;
+  
+  /* Sidebar */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.35 0.15 270);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0.005 270);
+  --sidebar-accent-foreground: oklch(0.25 0.10 270);
+  --sidebar-border: oklch(0.90 0.01 270);
+  --sidebar-ring: oklch(0.55 0.25 290);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.70 0.20 270);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.269 0.05 270);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0.02 270);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.35 0.15 290);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: #ffffff;
+  --border: oklch(0.269 0.02 270);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.70 0.20 270);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.70 0.20 290);
+  --chart-2: oklch(0.70 0.18 160);
+  --chart-3: oklch(0.60 0.15 270);
+  --chart-4: oklch(0.75 0.20 50);
+  --chart-5: oklch(0.70 0.18 200);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.70 0.20 270);
+  --sidebar-primary-foreground: oklch(0.145 0 0);
+  --sidebar-accent: oklch(0.269 0.05 270);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.70 0.20 270);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Couleurs personnalisées pour BoostActivity */
+  --color-brand-purple: var(--accent-purple);
+  --color-brand-purple-light: var(--accent-purple-light);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-energy: var(--energy);
+  --color-energy-light: var(--energy-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"])):not(:has([class^="text-"]))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* ===== CLASSES UTILITAIRES POUR LES COULEURS DE MARQUE ===== */
+@layer utilities {
+  .text-brand-purple {
+    color: var(--accent-purple);
+  }
+  
+  .bg-brand-purple {
+    background-color: var(--accent-purple);
+  }
+  
+  .text-success {
+    color: var(--success);
+  }
+  
+  .bg-success {
+    background-color: var(--success);
+  }
+  
+  .text-energy {
+    color: var(--energy);
+  }
+  
+  .bg-energy {
+    background-color: var(--energy);
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-purple) 100%);
+  }
+  
+  .gradient-success {
+    background: linear-gradient(135deg, var(--success) 0%, var(--accent-purple) 100%);
+  }
+  
+  .gradient-energy {
+    background: linear-gradient(135deg, var(--energy) 0%, var(--accent-purple) 100%);
+  }
+  
+  /* Gradients animés */
+  .gradient-animated {
+    background: linear-gradient(-45deg, var(--primary), var(--accent-purple), var(--success), var(--energy));
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+  
+  /* ===================================================================== */
+  /* GRADIENTS DE FOND PAR PAGE                                            */
+  /* Standard Pattern : ellipse 90% 80% at 30% 28% (hero)                 */
+  /*                    ellipse 88% 78% at 30% 25% (sections)             */
+  /* Standard Opacities : 0.55 (hero), 0.48 (sections), 0.58 (CTA)        */
+  /* ===================================================================== */
+  
+  /* ===================== HOMEPAGE ===================== */
+  /* HomePage - Vision, Innovation, Croissance (Multi-couleurs) */
+  
+  .bg-home-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--home-indigo-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--home-purple-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--home-indigo-light) 0%, var(--home-teal-light) 100%);
+    opacity: 0.55;
+  }
+  
+  .bg-home-cta {
+    background:
+      radial-gradient(ellipse 90% 78% at 30% 28%, var(--home-teal-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 78% at 72% 72%, var(--home-purple-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--home-teal-light) 0%, var(--home-indigo-light) 100%);
+    opacity: 0.58;
+  }
+  
+  /* ===================== ABOUTPAGE ===================== */
+  /* AboutPage - Passion, Équipe, Chaleur Humaine */
+  
+  .bg-about-hero {
+    background: 
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--about-coral-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--about-rose-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--about-coral-light) 0%, var(--about-amber-light) 100%);
+    opacity: 0.55;
+  }
+  
+  .bg-about-mission {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--about-rose-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--about-coral-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-about-values {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--accent-purple-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--about-rose-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-about-stats {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--about-amber-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--about-coral-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-about-grid {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--about-rose-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--about-amber-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-about-cta {
+    background:
+      radial-gradient(ellipse 90% 78% at 30% 28%, var(--about-amber-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 78% at 72% 72%, var(--about-coral-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--about-amber-light) 0%, var(--about-rose-light) 100%);
+    opacity: 0.58;
+  }
+  
+  /* ===================== SERVICESPAGE ===================== */
+  /* ServicesPage - Expertise, Solutions, Professionnalisme */
+  
+  .bg-services-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--services-indigo-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--services-teal-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--services-indigo-light) 0%, var(--services-sky-light) 100%);
+    opacity: 0.38;
+  }
+  
+  .bg-services-grid {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--services-sky-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--services-indigo-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-services-process {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--success-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--services-teal-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-services-features {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--services-teal-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--services-sky-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  /* ===================== SOLUTIONSPAGE ===================== */
+  /* SolutionsPage - Innovation, Transformation, Technologie */
+  
+  .bg-solutions-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--solutions-violet-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--accent-purple-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--solutions-violet-light) 0%, var(--solutions-cyan-light) 100%);
+    opacity: 0.38;
+  }
+  
+  .bg-solutions-grid {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--solutions-cyan-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--solutions-violet-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-solutions-stats {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--solutions-cyan-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--accent-purple-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-solutions-features {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--accent-purple-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--solutions-violet-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  /* ===================== CASESTUDIESPAGE ===================== */
+  /* CaseStudiesPage - Succès, Résultats, Performance */
+  
+  .bg-cases-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--cases-emerald-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--cases-mint-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--cases-emerald-light) 0%, var(--cases-gold-light) 100%);
+    opacity: 0.55;
+  }
+  
+  .bg-cases-stats {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--cases-gold-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--about-amber-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-cases-grid {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--cases-emerald-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--cases-mint-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  /* ===================== PRICINGPAGE ===================== */
+  /* PricingPage - Valeur, Investissement, Premium */
+  
+  .bg-pricing-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--pricing-purple-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--pricing-lime-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--pricing-purple-light) 0%, var(--pricing-lime-light) 100%);
+    opacity: 0.55;
+  }
+  
+  .bg-pricing-plans {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--pricing-lavender-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--pricing-purple-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-pricing-features {
+    background: linear-gradient(135deg, var(--pricing-lime-light) 0%, var(--pricing-purple-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bg-pricing-value {
+    background: linear-gradient(135deg, var(--pricing-lime-light) 0%, var(--pricing-lavender-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bg-pricing-faq {
+    background: linear-gradient(135deg, var(--pricing-purple-light) 0%, var(--pricing-lime-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bg-pricing-cta {
+    background:
+      radial-gradient(ellipse 90% 78% at 30% 28%, var(--pricing-purple-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 78% at 72% 72%, var(--pricing-lime-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--pricing-purple-light) 0%, var(--pricing-lime-light) 100%);
+    opacity: 0.58;
+  }
+  
+  /* ===================== CONTACTPAGE ===================== */
+  /* ContactPage - Communication, Action, Engagement */
+  
+  .bg-contact-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--contact-azure-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--services-sky-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--contact-azure-light) 0%, var(--contact-orange-light) 100%);
+    opacity: 0.38;
+  }
+  
+  .bg-contact-form {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--services-indigo-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--contact-azure-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-contact-info {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--services-teal-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--contact-azure-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-contact-cta {
+    background:
+      radial-gradient(ellipse 90% 78% at 30% 28%, var(--contact-azure-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 78% at 72% 72%, var(--contact-orange-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--contact-azure-light) 0%, var(--contact-orange-light) 100%);
+    opacity: 0.58;
+  }
+  
+  /* ===================== RESOURCESPAGE ===================== */
+  /* ResourcesPage - Apprentissage, Connaissance, Savoir */
+  /* Progression chromatique : Amber → Sky → Indigo → Purple → Mint → Sky → Amber (cercle complet) */
+  
+  .bg-resources-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--resources-amber-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--services-sky-light) 0%, transparent 50%),
+      linear-gradient(135deg, var(--resources-amber-light) 0%, var(--services-sky-light) 100%);
+    opacity: 0.55;
+  }
+  
+  .bg-resources-featured {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--services-sky-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--services-indigo-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  .bg-resources-grid {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-sky-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--services-indigo-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bg-resources-newsletter {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-sky-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--services-indigo-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bg-resources-blog {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-sky-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--services-indigo-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bg-resources-cta {
+    background:
+      radial-gradient(ellipse 90% 78% at 30% 28%, var(--services-sky-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 78% at 72% 72%, var(--resources-amber-light) 0%, transparent 50%);
+    opacity: 0.58;
+  }
+  
+  /* ===================== LEGALPAGE ===================== */
+  /* LegalPage - Sérieux, Conformité, Légalité */
+  
+  .bg-legal-hero {
+    background:
+      radial-gradient(ellipse 90% 80% at 30% 28%, var(--legal-slate-light) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 80% at 72% 72%, var(--legal-navy-light) 0%, transparent 50%);
+    opacity: 0.55;
+  }
+  
+  .bg-legal-content {
+    background:
+      radial-gradient(ellipse 88% 78% at 30% 25%, var(--services-indigo-light) 0%, transparent 50%),
+      radial-gradient(ellipse 88% 78% at 72% 75%, var(--legal-slate-light) 0%, transparent 50%);
+    opacity: 0.48;
+  }
+  
+  /* ===================================================================== */
+  /* CLASSES UTILITAIRES - EFFETS ET HOVER                                */
+  /* ===================================================================== */
+  
+  /* Classes hover universelles (très subtiles avec couleurs douces) */
+  .bg-hover-subtle {
+    opacity: 0.05;
+    transition: opacity 0.6s ease;
+  }
+  
+  .bg-hover-extra-subtle {
+    opacity: 0.03;
+    transition: opacity 0.6s ease;
+  }
+  
+  /* Fond blanc avec teinte très subtile (pour sections blanches) */
+  .bg-white-soft {
+    background: linear-gradient(135deg, 
+      oklch(0.995 0.002 270) 0%, 
+      oklch(0.998 0.001 290) 100%
+    );
+  }
+  
+  /* Alternative: fond blanc avec juste une touche de lumière */
+  .bg-white-subtle {
+    background: linear-gradient(180deg,
+      oklch(0.998 0.001 270) 0%,
+      oklch(1 0 0) 50%,
+      oklch(0.998 0.001 290) 100%
+    );
+  }
+  
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Effet de brillance au hover */
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .shine-effect:hover::before {
+    left: 100%;
+  }
+  
+  /* Animation de pulsation subtile */
+  .pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  /* Float animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Glow effect */
+  .glow-on-hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .glow-on-hover:hover {
+    box-shadow: 0 0 30px rgba(88, 80, 236, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* Stagger reveal animation */
+  .stagger-item {
+    animation: stagger-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  
+  @keyframes stagger-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Parallax layers */
+  .parallax-slow {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  /* Magnetic effect */
+  .magnetic {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  /* Smooth reveal */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Gradient text animation */
+  .gradient-text-animated {
+    background: linear-gradient(-45deg, var(--primary), var(--accent-purple), var(--success), var(--energy));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  /* Blob animation */
+  .blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: blob-morph 10s ease-in-out infinite;
+  }
+  
+  @keyframes blob-morph {
+    0%, 100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+  }
+  
+  /* Ripple effect */
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .ripple:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Scale and glow on hover */
+  .scale-glow {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .scale-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(88, 80, 236, 0.2);
+  }
+  
+  /* Bounce on hover */
+  .bounce-hover {
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .bounce-hover:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Rotate on hover */
+  .rotate-hover {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .rotate-hover:hover {
+    transform: rotate(5deg) scale(1.05);
+  }
+
+  /* ===================================================================== */
+  /* CLASSES HOVER POUR CARTES (révèlent la couleur au survol)            */
+  /* ===================================================================== */
+  
+  /* ===================== HOMEPAGE HOVERS ===================== */
+  
+  .card-hover-home-hero {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-purple-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-home-services {
+    background: linear-gradient(135deg, var(--services-indigo-light) 0%, var(--accent-purple-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-home-solutions {
+    background: linear-gradient(135deg, var(--success-light) 0%, var(--cases-emerald-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-home-cta {
+    background: linear-gradient(135deg, var(--energy-light) 0%, var(--about-coral-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-purple-variant {
+    background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--about-rose-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-energy-variant {
+    background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--energy-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-warm-variant {
+    background: linear-gradient(135deg, var(--about-rose-light) 0%, var(--services-teal-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== ABOUTPAGE HOVERS ===================== */
+  
+  .card-hover-about-hero {
+    background: linear-gradient(135deg, var(--about-coral-light) 0%, var(--about-rose-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-about-values {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--accent-purple-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--about-amber-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--accent-purple-light) 0%, var(--about-rose-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-about-stats {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--about-amber-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--about-rose-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--about-amber-light) 0%, var(--about-coral-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-about-team {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--accent-purple-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--about-rose-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--accent-purple-light) 0%, var(--about-rose-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-about-why {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--about-rose-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--about-amber-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--about-rose-light) 0%, var(--about-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-about-grid {
+    background: linear-gradient(135deg, var(--about-amber-light) 0%, var(--about-rose-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-about-cta {
+    background: linear-gradient(135deg, var(--about-amber-light) 0%, var(--about-coral-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== SERVICESPAGE HOVERS ===================== */
+  
+  .card-hover-services-hero {
+    background: linear-gradient(135deg, var(--services-indigo-light) 0%, var(--services-sky-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-services-grid {
+    background: linear-gradient(135deg, var(--services-sky-light) 0%, var(--services-indigo-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-services-process {
+    background: linear-gradient(135deg, var(--success-light) 0%, var(--services-teal-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-services-features {
+    background: linear-gradient(135deg, var(--services-teal-light) 0%, var(--services-sky-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== SOLUTIONSPAGE HOVERS ===================== */
+  
+  .card-hover-solutions-hero {
+    background: linear-gradient(135deg, var(--solutions-violet-light) 0%, var(--solutions-cyan-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-solutions-grid {
+    background: linear-gradient(135deg, var(--solutions-cyan-light) 0%, var(--solutions-violet-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-solutions-stats {
+    background: linear-gradient(135deg, var(--solutions-cyan-light) 0%, var(--accent-purple-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-solutions-features {
+    background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--solutions-violet-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== CASESTUDIESPAGE HOVERS ===================== */
+  
+  .card-hover-cases-hero {
+    background: linear-gradient(135deg, var(--cases-emerald-light) 0%, var(--cases-gold-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-cases-stats {
+    background: linear-gradient(135deg, var(--cases-mint-light) 0%, var(--cases-emerald-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-cases-grid {
+    background: linear-gradient(135deg, var(--cases-mint-light) 0%, var(--cases-emerald-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== PRICINGPAGE HOVERS ===================== */
+  
+  .card-hover-pricing-hero {
+    background: linear-gradient(135deg, var(--pricing-purple-light) 0%, var(--pricing-lime-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-pricing-plans {
+    background: linear-gradient(135deg, var(--pricing-lavender-light) 0%, var(--pricing-purple-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-pricing-features {
+    background: linear-gradient(135deg, var(--pricing-lime-light) 0%, var(--pricing-purple-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-pricing-value {
+    background: linear-gradient(135deg, var(--pricing-lime-light) 0%, var(--pricing-lavender-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-pricing-faq {
+    background: linear-gradient(135deg, var(--pricing-purple-light) 0%, var(--pricing-lime-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-pricing-cta {
+    background: linear-gradient(135deg, var(--pricing-purple-light) 0%, var(--pricing-lime-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== CONTACTPAGE HOVERS ===================== */
+  
+  .card-hover-contact-hero {
+    background: linear-gradient(135deg, var(--contact-azure-light) 0%, var(--contact-orange-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-contact-form {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-indigo-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--contact-azure-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-indigo-light) 0%, var(--contact-azure-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-contact-info {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-teal-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--contact-azure-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-teal-light) 0%, var(--contact-azure-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-contact-cta {
+    background: linear-gradient(135deg, var(--contact-azure-light) 0%, var(--contact-orange-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== RESOURCESPAGE HOVERS ===================== */
+  
+  .card-hover-resources-hero {
+    background: linear-gradient(135deg, var(--resources-amber-light) 0%, var(--services-sky-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-resources-featured {
+    background: linear-gradient(135deg, var(--services-sky-light) 0%, var(--services-indigo-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-resources-grid {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-sky-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--services-indigo-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-resources-newsletter {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-sky-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--services-indigo-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-resources-blog {
+    background: 
+      radial-gradient(ellipse 100% 100% at 20% 30%, var(--services-sky-light) 0%, transparent 60%),
+      radial-gradient(ellipse 90% 90% at 80% 70%, var(--services-indigo-light) 0%, transparent 60%),
+      linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-resources-cta {
+    background: linear-gradient(135deg, var(--services-sky-light) 0%, var(--resources-amber-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================== LEGALPAGE HOVERS ===================== */
+  
+  .card-hover-legal-hero {
+    background: linear-gradient(135deg, var(--legal-slate-light) 0%, var(--legal-navy-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-hover-legal-content {
+    background: linear-gradient(135deg, var(--services-indigo-light) 0%, var(--legal-slate-light) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* ===================================================================== */
+  /* ACTIVATION DES CLASSES HOVER                                         */
+  /* ===================================================================== */
+  
+  /* Activation au hover pour toutes les classes hover */
+  .group:hover .card-hover-home-hero,
+  .group:hover .card-hover-home-services,
+  .group:hover .card-hover-home-solutions,
+  .group:hover .card-hover-home-cta,
+  .group:hover .card-hover-purple-variant,
+  .group:hover .card-hover-energy-variant,
+  .group:hover .card-hover-warm-variant,
+  .group:hover .card-hover-about-hero,
+  .group:hover .card-hover-about-values,
+  .group:hover .card-hover-about-stats,
+  .group:hover .card-hover-about-team,
+  .group:hover .card-hover-about-why,
+  .group:hover .card-hover-about-grid,
+  .group:hover .card-hover-about-cta,
+  .group:hover .card-hover-services-hero,
+  .group:hover .card-hover-services-grid,
+  .group:hover .card-hover-services-process,
+  .group:hover .card-hover-services-features,
+  .group:hover .card-hover-solutions-hero,
+  .group:hover .card-hover-solutions-grid,
+  .group:hover .card-hover-solutions-stats,
+  .group:hover .card-hover-solutions-features,
+  .group:hover .card-hover-cases-hero,
+  .group:hover .card-hover-cases-stats,
+  .group:hover .card-hover-cases-grid,
+  .group:hover .card-hover-pricing-hero,
+  .group:hover .card-hover-pricing-plans,
+  .group:hover .card-hover-pricing-features,
+  .group:hover .card-hover-pricing-value,
+  .group:hover .card-hover-pricing-faq,
+  .group:hover .card-hover-pricing-cta,
+  .group:hover .card-hover-contact-hero,
+  .group:hover .card-hover-contact-form,
+  .group:hover .card-hover-contact-info,
+  .group:hover .card-hover-contact-cta,
+  .group:hover .card-hover-resources-hero,
+  .group:hover .card-hover-resources-featured,
+  .group:hover .card-hover-resources-grid,
+  .group:hover .card-hover-resources-newsletter,
+  .group:hover .card-hover-resources-blog,
+  .group:hover .card-hover-resources-cta,
+  .group:hover .card-hover-legal-hero,
+  .group:hover .card-hover-legal-content {
+    opacity: 0.35;
+  }
+}

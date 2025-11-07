@@ -1,0 +1,22 @@
+# Boost Activity - Robots.txt
+# https://boostactivity.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://boostactivity.fr/sitemap.xml
+
+# Crawl Delay (optional, for heavy crawlers)
+Crawl-delay: 1
+
+# Disallow paths (if any)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /supabase/
+
+# Allow important resources
+Allow: /styles/
+Allow: /components/
+Allow: /images/
