@@ -1,8 +1,9 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Target, Users, BarChart, MessageCircle, Award } from 'lucide-react';
+import { ArrowRight, TrendingUp, Target, Users, BarChart, MessageCircle, Award, UtensilsCrossed } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { FloatingShapes } from '../components/FloatingShapes';
 import { GradientBackground } from '../components/GradientBackground';
@@ -27,7 +28,7 @@ export function ServicesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="services-hero" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
@@ -36,7 +37,7 @@ export function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-4 sm:mb-5 md:mb-6">
               <span className="text-black">Nos </span>
               <span className="gradient-text-animated">services</span>
             </h1>
@@ -46,7 +47,7 @@ export function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
+            className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
           >
             Une gamme complète de services conçus pour propulser votre croissance digitale. Chaque solution est sur-mesure, pensée pour vos objectifs uniques.
           </motion.p>
@@ -54,10 +55,10 @@ export function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="services-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 md:gap-8">
             {[
               {
                 icon: Target,
@@ -100,6 +101,13 @@ export function ServicesPage() {
                 slug: 'recompenses-reconnaissance',
                 description: 'Obtenez des récompenses et une reconnaissance pour votre travail',
                 features: ['Programmes de récompenses', 'Certifications', 'Reconnaissance', 'Récompenses'],
+              },
+              {
+                icon: UtensilsCrossed,
+                title: 'Drop Eats',
+                slug: 'drop-eats',
+                description: 'Solution complète pour restaurants et traiteurs : optimisation des livraisons, marketing ciblé et gestion digitale',
+                features: ['Optimisation livraison', 'Marketing restaurant', 'Gestion commandes', 'Analyse performance'],
               },
             ].map((service, index) => {
               const isDropEats = service.slug === 'drop-eats';
@@ -161,7 +169,7 @@ export function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="services-content" opacity={0.48} />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.div
@@ -169,18 +177,18 @@ export function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-5 sm:mb-6">
               <span className="text-black">Notre </span>
               <span className="gradient-text-animated">méthode</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
               Un processus éprouvé pour garantir votre succès à chaque étape
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-8">
             {[
               { step: '01', title: 'Découverte', description: 'Comprendre vos objectifs, votre marché et vos défis' },
               { step: '02', title: 'Stratégie', description: 'Élaborer un plan d\'action sur-mesure et mesurable' },
@@ -193,17 +201,31 @@ export function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                whileTap={{ scale: 0.98 }}
               >
-                <div className="text-[48px] tracking-tight gradient-text-animated mb-4">
-                  {phase.step}
-                </div>
-                <h3 className="text-[24px] tracking-tight text-black mb-3">
-                  {phase.title}
-                </h3>
-                <p className="text-[16px] text-gray-600 leading-relaxed">
-                  {phase.description}
-                </p>
+                <Card className="border-gray-200 bg-white/80 backdrop-blur-sm transition-all duration-500 group relative overflow-hidden hover:shadow-lg active:scale-[0.98]">
+                  <div className="absolute inset-0 card-hover-energy-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Layout horizontal sur mobile, vertical sur desktop */}
+                  <div className="relative z-10 flex flex-row sm:flex-col items-center sm:items-stretch gap-4 sm:gap-0 p-5 sm:p-7 md:p-8">
+                    {/* Numéro - compact et centré sur mobile */}
+                    <div className="flex-shrink-0 sm:mb-3 md:mb-4 flex items-center justify-center">
+                      <div className="text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-tight gradient-text-animated group-hover:scale-110 transition-transform duration-300 inline-block leading-none">
+                        {phase.step}
+                      </div>
+                    </div>
+                    
+                    {/* Contenu - à droite sur mobile, en dessous sur desktop */}
+                    <div className="flex-1 min-w-0 flex flex-col justify-center sm:justify-start">
+                      <h3 className="text-[17px] sm:text-[19px] md:text-[21px] lg:text-[24px] tracking-tight text-black mb-1.5 sm:mb-2 md:mb-3">
+                        {phase.title}
+                      </h3>
+                      <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-gray-600 leading-[1.55] sm:leading-[1.6]">
+                        {phase.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -211,7 +233,7 @@ export function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="services-cta" opacity={0.65} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -220,18 +242,18 @@ export function ServicesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-7 md:mb-8">
               <span className="text-black">Besoin d'un </span>
               <span className="gradient-text-animated">service</span>
               <br />
               <span className="gradient-text-animated">sur-mesure</span>
               <span className="text-black"> ?</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Parlons de votre projet et créons ensemble la solution parfaite pour vos besoins.
             </p>
             <Link to="/contact">
-              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
                 Discutons de votre projet
               </Button>
             </Link>

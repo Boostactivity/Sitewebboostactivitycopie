@@ -1,0 +1,252 @@
+/**
+ * Performance & Core Web Vitals CSS
+ * Optimise LCP, FID et CLS
+ */
+
+/* Lazy loading des images avec blur-up effect */
+.lazy-image {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.lazy-image.lazy-loaded {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Conteneur avec aspect-ratio pour éviter le CLS */
+.aspect-ratio-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.aspect-ratio-container::before {
+  content: '';
+  display: block;
+  padding-top: var(--aspect-ratio, 56.25%); /* Default: 16/9 */
+}
+
+.aspect-ratio-container > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optimisation des animations pour éviter le reflow */
+.optimized-animation,
+[data-motion] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Forcer l'accélération GPU pour les animations motion */
+[style*="opacity"],
+[style*="transform"] {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+/* Skeleton loaders pour éviter le CLS */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #f8f8f8 50%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Optimisation pour les conteneurs de texte (éviter le CLS) */
+.text-container {
+  min-height: 1em; /* Réserve l'espace même si vide */
+}
+
+/* Optimisation des images hero (above-the-fold) */
+.hero-image {
+  content-visibility: auto;
+  contain-intrinsic-size: 1200px 600px; /* Dimensions approximatives */
+}
+
+/* Optimisation des grilles pour éviter le layout shift */
+.stable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  contain: layout; /* Empêche les reflows externes */
+}
+
+/* Précharge des fonts pour éviter le FOIT (Flash of Invisible Text) */
+@font-face {
+  font-family: 'Critical Font';
+  font-display: swap; /* Affiche le fallback en attendant */
+}
+
+/* Optimisation des transitions pour le GPU */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Conteneur principal optimisé */
+.performance-container {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Optimisation des sections below-the-fold */
+.below-fold-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Placeholder pour les images en chargement */
+.image-placeholder {
+  background: #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Optimisation des cartes/cards */
+.optimized-card {
+  contain: layout style;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* Prévenir le layout shift des boutons */
+.stable-button {
+  min-width: 120px;
+  min-height: 44px; /* Taille minimum recommandée pour le tap target */
+}
+
+/* Optimisation des scrolls */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimisation pour les modals/overlays */
+.modal-overlay {
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* Réduire le paint pour les backgrounds complexes */
+.simplified-background {
+  will-change: auto;
+  contain: strict;
+}
+
+/* Classes utilitaires pour les Core Web Vitals */
+
+/* LCP - Optimisation du contenu principal */
+.lcp-element {
+  /* L'élément LCP doit être visible rapidement */
+  content-visibility: visible !important;
+}
+
+/* CLS - Réserver l'espace pour éviter les shifts */
+.reserve-space {
+  min-height: var(--reserved-height, auto);
+  min-width: var(--reserved-width, auto);
+}
+
+/* FID - Optimiser les interactions */
+.interactive-element {
+  touch-action: manipulation; /* Évite le delay de 300ms sur mobile */
+  user-select: none;
+}
+
+/* Précharger les ressources critiques */
+.critical-resource {
+  importance: high;
+}
+
+/* Optimisation pour les SVG */
+svg.optimized-svg {
+  width: 100%;
+  height: auto;
+  display: block; /* Évite le whitespace */
+}
+
+/* Optimisation des vidéos */
+video.optimized-video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Désactiver les animations pour les utilisateurs qui préfèrent reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimisation print (bonus) */
+@media print {
+  .lazy-image {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  
+  .skeleton {
+    animation: none !important;
+    background: #f0f0f0 !important;
+  }
+}
+
+/* Support pour les dark mode sans layout shift */
+@media (prefers-color-scheme: dark) {
+  .image-placeholder {
+    background: #1f2937;
+  }
+}

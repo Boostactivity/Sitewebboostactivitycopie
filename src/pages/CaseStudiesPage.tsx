@@ -31,18 +31,93 @@ export function CaseStudiesPage() {
     '@graph': [pageSchema, faq],
   };
 
+  const caseStudies = [
+    {
+      slug: 'la-belle-table',
+      title: 'La Belle Table',
+      category: 'Restaurant',
+      description: 'Comment ce restaurant gastronomique a multiplié ses réservations par 2.8 en 6 mois.',
+      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      results: [
+        { label: 'Réservations', value: '+180%' },
+        { label: 'Avis Google', value: '4.8/5' },
+        { label: 'ROI', value: '420%' },
+      ],
+    },
+    {
+      slug: 'elegance-fashion',
+      title: 'Élégance Fashion',
+      category: 'E-commerce',
+      description: 'Une boutique en ligne qui a généré 68K€ de CA en 4 mois avec nos stratégies SEO et publicités.',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
+      results: [
+        { label: 'Chiffre d\'affaires', value: '68K€' },
+        { label: 'Taux de conversion', value: '+156%' },
+        { label: 'Panier moyen', value: '+42%' },
+      ],
+    },
+    {
+      slug: 'energym',
+      title: 'EnerGym',
+      category: 'Fitness',
+      description: 'Cette salle de sport a attiré 340 nouveaux membres en 5 mois grâce au marketing digital.',
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop',
+      results: [
+        { label: 'Nouveaux membres', value: '340' },
+        { label: 'Coût acquisition', value: '-63%' },
+        { label: 'Rétention', value: '89%' },
+      ],
+    },
+    {
+      slug: 'strategie-plus',
+      title: 'Stratégie Plus',
+      category: 'Conseil B2B',
+      description: 'Un cabinet de conseil qui a généré 520K€ de pipeline commercial avec l\'inbound marketing.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+      results: [
+        { label: 'Pipeline généré', value: '520K€' },
+        { label: 'Leads qualifiés', value: '+385%' },
+        { label: 'Taux closing', value: '34%' },
+      ],
+    },
+    {
+      slug: 'premium-immobilier',
+      title: 'Premium Immobilier',
+      category: 'Immobilier',
+      description: 'Une agence immobilière qui a vendu 12 biens de luxe en 8 mois grâce aux publicités ciblées.',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+      results: [
+        { label: 'Biens vendus', value: '12' },
+        { label: 'Délai de vente', value: '-45%' },
+        { label: 'Prix moyen', value: '780K€' },
+      ],
+    },
+    {
+      slug: 'clinique-sourire',
+      title: 'Clinique Sourire',
+      category: 'Santé',
+      description: 'Un cabinet dentaire qui a doublé sa patientèle en 10 mois avec une stratégie locale efficace.',
+      image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop',
+      results: [
+        { label: 'Nouveaux patients', value: '+210%' },
+        { label: 'Taux de remplissage', value: '95%' },
+        { label: 'Satisfaction', value: '4.9/5' },
+      ],
+    },
+  ];
+
   return (
     <div className="bg-white">
       <SEO
         title="Études de Cas Marketing Digital - Résultats Clients | Boost Activity"
-        description="Découvrez nos success stories : +180% de réservations, 68K€ de CA, 520K€ de pipeline. Études de cas détaillées de nos clients en restaurant, e-commerce, fitness, immobilier."
+        description="Découvrez nos résultats : +180% réservations, 68K€ CA, 520K€ pipeline. Cas clients restaurant, e-commerce, fitness, immobilier."
         keywords="études de cas marketing digital, success stories, résultats clients, croissance restaurant, e-commerce, fitness, immobilier"
         ogImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
         canonical="https://boostactivity.fr/case-studies"
         schema={combinedSchema}
       />
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="cases-hero" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
@@ -51,7 +126,7 @@ export function CaseStudiesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
               <span className="gradient-text-animated">Études de cas</span>
             </h1>
           </motion.div>
@@ -68,17 +143,17 @@ export function CaseStudiesPage() {
       </section>
 
       {/* Stats Overview */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="cases-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: TrendingUp, label: 'Croissance moyenne', value: '+280%' },
-              { icon: Users, label: 'Clients accompagnés', value: '165+' },
-              { icon: Target, label: 'Taux de réussite', value: '100%' },
-            ].map((stat, index) => (
+              { icon: TrendingUp, label: 'Résultats mesurables', value: '100%' },
+              { icon: Users, label: 'Clients accompagnés', value: '35+' },
+              { icon: Target, label: 'Taux de satisfaction', value: '100%' },
+            ].map((item, index) => (
               <motion.div
-                key={stat.label}
+                key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -88,9 +163,9 @@ export function CaseStudiesPage() {
                   <div className="absolute inset-0 card-hover-cases-stats">
                   </div>
                   <div className="relative z-10">
-                    <stat.icon className="w-10 h-10 text-gray-800 mx-auto mb-4" />
-                    <div className="text-[48px] tracking-tight gradient-text-animated mb-2">{stat.value}</div>
-                    <div className="text-[14px] text-gray-600">{stat.label}</div>
+                    <item.icon className="w-10 h-10 text-gray-800 mx-auto mb-4" />
+                    <div className="text-[48px] tracking-tight gradient-text-animated mb-2">{item.value}</div>
+                    <div className="text-[14px] text-gray-600">{item.label}</div>
                   </div>
                 </Card>
               </motion.div>
@@ -100,7 +175,7 @@ export function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="cases-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -138,15 +213,15 @@ export function CaseStudiesPage() {
                         </h3>
                         
                         <p className="text-[16px] text-gray-600 mb-4">
-                          {study.challenge}
+                          {study.description}
                         </p>
                         
                         <div className="text-[21px] tracking-tight text-black mb-6">
-                          {study.result}
+                          Résultats :
                         </div>
                         
                         <div className="grid grid-cols-3 gap-4 mb-6 py-6 border-t border-b border-gray-200">
-                          {study.metrics.map((metric) => (
+                          {study.results.map((metric) => (
                             <div key={metric.label} className="text-center">
                               <div className="text-[24px] tracking-tight gradient-text-animated mb-1">
                                 {metric.value}
@@ -155,17 +230,6 @@ export function CaseStudiesPage() {
                                 {metric.label}
                               </div>
                             </div>
-                          ))}
-                        </div>
-                        
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {study.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="text-[12px] text-gray-600 bg-gray-100 px-3 py-1 rounded-full"
-                            >
-                              {tag}
-                            </span>
                           ))}
                         </div>
                         

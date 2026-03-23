@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { useParams, Link } from 'react-router-dom';
-import { Target, TrendingUp, Palette, Globe, BarChart3, MessageSquare, Mail, Zap, Check, ArrowRight, ArrowLeft, UtensilsCrossed } from 'lucide-react';
+import { Target, TrendingUp, Palette, Globe, BarChart3, MessageSquare, Mail, Zap, Check, ArrowRight, ArrowLeft, UtensilsCrossed, Users, BarChart } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
@@ -610,6 +610,114 @@ export function ServiceDetailPage() {
         },
       ],
     },
+    'audience-engagement': {
+      icon: Users,
+      title: 'Audience & Engagement',
+      subtitle: 'Développez une communauté fidèle et engagée',
+      description: 'Créez des liens authentiques avec votre audience et transformez vos visiteurs en une communauté active et engagée. De la création de contenu viral à la gestion d\'événements en ligne, maximisez l\'engagement sur tous vos canaux.',
+      benefits: [
+        'Communauté active et fidèle',
+        'Taux d\'engagement élevés',
+        'Reach organique maximisé',
+        'Contenu viral et partageable',
+        'Relations clients authentiques',
+        'Ambassadeurs de marque',
+      ],
+      process: [
+        {
+          title: 'Analyse d\'audience',
+          description: 'Étude approfondie de votre audience actuelle et potentielle',
+        },
+        {
+          title: 'Stratégie d\'engagement',
+          description: 'Définition de votre ton, style et tactiques d\'interaction',
+        },
+        {
+          title: 'Création de contenu',
+          description: 'Production de contenu engageant et adapté à chaque plateforme',
+        },
+        {
+          title: 'Animation & Growth',
+          description: 'Animation quotidienne et croissance organique de la communauté',
+        },
+      ],
+      deliverables: [
+        'Stratégie d\'engagement complète',
+        'Calendrier de contenu interactif',
+        'Contenu créatif (posts, stories, lives)',
+        'Gestion de communauté active',
+        'Événements en ligne (webinars, challenges)',
+        'Rapports d\'engagement mensuels',
+      ],
+      faq: [
+        {
+          question: 'Comment mesurer l\'engagement réel ?',
+          answer: 'Nous suivons les métriques clés : taux d\'interaction, partages, commentaires, mentions, DM, temps passé, et sentiment des conversations.',
+        },
+        {
+          question: 'Quelle est la différence avec le community management classique ?',
+          answer: 'Nous allons au-delà de la simple réponse aux commentaires. Nous créons des stratégies pour stimuler les conversations, créer du contenu viral, et transformer votre audience en ambassadeurs.',
+        },
+        {
+          question: 'Combien de temps pour créer une communauté engagée ?',
+          answer: 'Les premiers signes d\'engagement apparaissent sous 4-6 semaines. Une communauté solide se construit en 3-6 mois avec une stratégie cohérente.',
+        },
+      ],
+    },
+    'performance-analytics': {
+      icon: BarChart,
+      title: 'Performance & Analytics',
+      subtitle: 'Mesurez, analysez, optimisez',
+      description: 'Prenez des décisions éclairées basées sur les données. Nous mettons en place des systèmes de tracking avancés, créons des dashboards personnalisés et fournissons des insights actionnables pour optimiser vos performances.',
+      benefits: [
+        'Visibilité totale sur vos performances',
+        'Décisions data-driven',
+        'ROI clairement mesuré',
+        'Identification des opportunités',
+        'Optimisation continue',
+        'Rapports automatisés et clairs',
+      ],
+      process: [
+        {
+          title: 'Setup & Tracking',
+          description: 'Installation des outils de tracking et configuration avancée',
+        },
+        {
+          title: 'Dashboard personnalisé',
+          description: 'Création de tableaux de bord adaptés à vos KPIs',
+        },
+        {
+          title: 'Analyse & Insights',
+          description: 'Analyse régulière et identification d\'opportunités d\'optimisation',
+        },
+        {
+          title: 'Recommandations',
+          description: 'Plans d\'action concrets basés sur les données',
+        },
+      ],
+      deliverables: [
+        'Setup complet Google Analytics 4',
+        'Tracking avancé (événements, conversions, parcours)',
+        'Dashboard personnalisé (Looker Studio, Power BI)',
+        'Rapports mensuels détaillés',
+        'Recommandations d\'optimisation',
+        'Formation à l\'utilisation des outils',
+      ],
+      faq: [
+        {
+          question: 'Quels outils analytics utilisez-vous ?',
+          answer: 'Nous travaillons principalement avec Google Analytics 4, Tag Manager, Looker Studio, et selon vos besoins : Hotjar, Mixpanel, Amplitude, ou Power BI.',
+        },
+        {
+          question: 'Puis-je avoir accès aux données en temps réel ?',
+          answer: 'Absolument. Nous créons des dashboards en temps réel auxquels vous avez accès 24/7, avec les métriques qui comptent vraiment pour vous.',
+        },
+        {
+          question: 'Comment savoir quels KPIs suivre ?',
+          answer: 'Nous définissons ensemble les KPIs pertinents selon vos objectifs business. Nous évitons les "vanity metrics" pour nous concentrer sur ce qui impacte vraiment vos résultats.',
+        },
+      ],
+    },
   };
 
   const serviceData = servicesData[slug || ''];
@@ -642,6 +750,8 @@ export function ServiceDetailPage() {
     'emailing-crm': { primary: 'cool', secondary: 'success' }, // Communication, fidélité
     'automatisation-ia': { primary: 'purple', secondary: 'energy' }, // Innovation, futur
     'drop-eats': { primary: 'success', secondary: 'energy' }, // Croissance, revenus, food
+    'audience-engagement': { primary: 'warm', secondary: 'energy' }, // Connexion, engagement
+    'performance-analytics': { primary: 'cool', secondary: 'success' }, // Analyse, optimisation
   };
 
   const colors = colorScheme[slug as keyof typeof colorScheme] || { primary: 'cool', secondary: 'purple' };
@@ -698,6 +808,16 @@ export function ServiceDetailPage() {
       description: 'Boostez vos commandes sur Uber Eats, Deliveroo et Just Eat. Optimisation menus, photos professionnelles et campagnes performantes.',
       keywords: 'marketing restaurant, Uber Eats, Deliveroo, Just Eat, livraison restaurant, optimisation menu',
     },
+    'audience-engagement': {
+      title: 'Audience & Engagement - Communauté & Fidélisation | Boost Activity',
+      description: 'Développez une communauté engagée et fidèle. Stratégie d\'engagement, contenu viral, événements en ligne et animation de communauté.',
+      keywords: 'engagement audience, communauté en ligne, community building, contenu viral, fidélisation client',
+    },
+    'performance-analytics': {
+      title: 'Performance & Analytics - Analyse de Données Marketing | Boost Activity',
+      description: 'Mesurez et optimisez vos performances avec des analytics avancés. Google Analytics 4, dashboards personnalisés, tracking et insights.',
+      keywords: 'analytics marketing, performance digitale, Google Analytics 4, tracking web, dashboard, data analysis',
+    },
   };
 
   const currentSeo = seoData[slug || ''] || seoData['strategie-digitale'];
@@ -730,7 +850,7 @@ export function ServiceDetailPage() {
         schema={combinedSchema}
       />
       {/* Hero Section */}
-      <section className="relative px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="services" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1400px] mx-auto relative z-10">
@@ -739,9 +859,9 @@ export function ServiceDetailPage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="mb-12"
+            className="mb-8 sm:mb-10 md:mb-12"
           >
-            <Link to="/services" className="inline-flex items-center text-[14px] text-gray-600 hover:text-black transition-colors">
+            <Link to="/services" className="inline-flex items-center text-[13px] sm:text-[14px] text-gray-600 hover:text-black transition-colors min-h-[52px] py-3">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Retour aux services
             </Link>
@@ -752,9 +872,9 @@ export function ServiceDetailPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="mb-8"
+            className="mb-6 sm:mb-7 md:mb-8"
           >
-            <Icon className="w-20 h-20 text-gray-800 mx-auto" />
+            <Icon className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 text-gray-800 mx-auto" />
           </motion.div>
 
           <motion.div
@@ -762,7 +882,7 @@ export function ServiceDetailPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           >
-            <h1 className="text-[56px] md:text-[80px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] tracking-tight leading-[1.05] mb-5 sm:mb-6">
               <span className="gradient-text-animated">{serviceData.title}</span>
             </h1>
           </motion.div>
@@ -771,7 +891,7 @@ export function ServiceDetailPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="text-[28px] text-gray-600 leading-relaxed max-w-[800px] mx-auto mb-12"
+            className="text-[20px] sm:text-[24px] md:text-[28px] text-gray-600 leading-relaxed max-w-[800px] mx-auto mb-8 sm:mb-10 md:mb-12"
           >
             {serviceData.subtitle}
           </motion.p>
@@ -782,8 +902,8 @@ export function ServiceDetailPage() {
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
             <Link to="/contact">
-              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
-                Démarrer ce service
+              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
+                Demander un audit gratuit
               </Button>
             </Link>
           </motion.div>
@@ -792,7 +912,7 @@ export function ServiceDetailPage() {
       </section>
 
       {/* Description Section */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-services-grid pointer-events-none" />
         <div className="max-w-[900px] mx-auto relative z-10">
           <motion.p
@@ -800,7 +920,7 @@ export function ServiceDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[21px] text-gray-700 leading-relaxed text-center"
+            className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-700 leading-relaxed text-center"
           >
             {serviceData.description}
           </motion.p>
@@ -1034,7 +1154,7 @@ export function ServiceDetailPage() {
       )}
 
       {/* Benefits Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-services-grid pointer-events-none" />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.h2
@@ -1042,13 +1162,13 @@ export function ServiceDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Les </span>
             <span className="gradient-text-animated">bénéfices</span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
             {serviceData.benefits.map((benefit: string, index: number) => (
               <motion.div
                 key={benefit}
@@ -1056,10 +1176,10 @@ export function ServiceDetailPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start space-x-4"
+                className="flex items-start space-x-3 sm:space-x-4"
               >
-                <Check className="w-6 h-6 text-black flex-shrink-0 mt-1" />
-                <p className="text-[17px] text-gray-700 leading-relaxed">{benefit}</p>
+                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-black flex-shrink-0 mt-1" />
+                <p className="text-[14px] sm:text-[16px] md:text-[17px] text-gray-700 leading-relaxed">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -1067,7 +1187,7 @@ export function ServiceDetailPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-services-features pointer-events-none" />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.h2
@@ -1084,7 +1204,7 @@ export function ServiceDetailPage() {
           {slug === 'drop-eats' && serviceData.process.length === 5 ? (
             <>
               {/* First 4 steps in grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-8 mb-6 sm:mb-7 md:mb-8">
                 {serviceData.process.slice(0, 4).map((step: any, index: number) => (
                   <motion.div
                     key={step.title}
@@ -1092,20 +1212,29 @@ export function ServiceDetailPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <Card className="p-8 h-full border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
-                      <div className="absolute inset-0 card-hover-services-features">
-                      </div>
-                      <div className="relative z-10">
-                        <div className="text-[48px] tracking-tight gradient-text-animated mb-4">
-                          {String(index + 1).padStart(2, '0')}
+                    <Card className="border-gray-200 bg-white/80 backdrop-blur-sm transition-all duration-500 group relative overflow-hidden hover:shadow-lg active:scale-[0.98]">
+                      <div className="absolute inset-0 card-hover-services-features opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
+                      {/* Layout horizontal sur mobile, vertical sur desktop */}
+                      <div className="relative z-10 flex flex-row sm:flex-col items-center sm:items-stretch gap-4 sm:gap-0 p-5 sm:p-7 md:p-8">
+                        {/* Numéro - compact et centré sur mobile */}
+                        <div className="flex-shrink-0 sm:mb-3 md:mb-4 flex items-center justify-center">
+                          <div className="text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-tight gradient-text-animated group-hover:scale-110 transition-transform duration-300 inline-block leading-none">
+                            {String(index + 1).padStart(2, '0')}
+                          </div>
                         </div>
-                        <h3 className="text-[24px] tracking-tight text-black mb-3">
-                          {step.title}
-                        </h3>
-                        <p className="text-[16px] text-gray-600 leading-relaxed">
-                          {step.description}
-                        </p>
+                        
+                        {/* Contenu - à droite sur mobile, en dessous sur desktop */}
+                        <div className="flex-1 min-w-0 flex flex-col justify-center sm:justify-start">
+                          <h3 className="text-[17px] sm:text-[19px] md:text-[21px] lg:text-[24px] tracking-tight text-black mb-1.5 sm:mb-2 md:mb-3">
+                            {step.title}
+                          </h3>
+                          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-gray-600 leading-[1.55] sm:leading-[1.6]">
+                            {step.description}
+                          </p>
+                        </div>
                       </div>
                     </Card>
                   </motion.div>
@@ -1147,7 +1276,7 @@ export function ServiceDetailPage() {
               </motion.div>
             </>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-8">
               {serviceData.process.map((step: any, index: number) => (
                 <motion.div
                   key={step.title}
@@ -1155,20 +1284,29 @@ export function ServiceDetailPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <Card className="p-8 h-full border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
-                    <div className="absolute inset-0 card-hover-services-features">
-                    </div>
-                    <div className="relative z-10">
-                      <div className="text-[48px] tracking-tight gradient-text-animated mb-4">
-                        {String(index + 1).padStart(2, '0')}
+                  <Card className="border-gray-200 bg-white/80 backdrop-blur-sm transition-all duration-500 group relative overflow-hidden hover:shadow-lg active:scale-[0.98]">
+                    <div className="absolute inset-0 card-hover-services-features opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    {/* Layout horizontal sur mobile, vertical sur desktop */}
+                    <div className="relative z-10 flex flex-row sm:flex-col items-center sm:items-stretch gap-4 sm:gap-0 p-5 sm:p-7 md:p-8">
+                      {/* Numéro - compact et centré sur mobile */}
+                      <div className="flex-shrink-0 sm:mb-3 md:mb-4 flex items-center justify-center">
+                        <div className="text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] tracking-tight gradient-text-animated group-hover:scale-110 transition-transform duration-300 inline-block leading-none">
+                          {String(index + 1).padStart(2, '0')}
+                        </div>
                       </div>
-                      <h3 className="text-[24px] tracking-tight text-black mb-3">
-                        {step.title}
-                      </h3>
-                      <p className="text-[16px] text-gray-600 leading-relaxed">
-                        {step.description}
-                      </p>
+                      
+                      {/* Contenu - à droite sur mobile, en dessous sur desktop */}
+                      <div className="flex-1 min-w-0 flex flex-col justify-center sm:justify-start">
+                        <h3 className="text-[17px] sm:text-[19px] md:text-[21px] lg:text-[24px] tracking-tight text-black mb-1.5 sm:mb-2 md:mb-3">
+                          {step.title}
+                        </h3>
+                        <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-gray-600 leading-[1.55] sm:leading-[1.6]">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   </Card>
                 </motion.div>

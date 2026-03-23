@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { FileText, Download, BookOpen, Video, CheckCircle2, ArrowRight } from 'lucide-react';
+import { FileText, Download, BookOpen, Video, CheckCircle2, ArrowRight, Clock, Lightbulb } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { GradientBackground } from '../components/GradientBackground';
 import { FloatingShapes } from '../components/FloatingShapes';
 import { SEO } from '../components/SEO';
@@ -18,6 +21,87 @@ export function ResourcesPage() {
     { name: 'Ressources', url: 'https://boostactivity.fr/resources' },
   ]);
 
+  const resources = [
+    {
+      title: 'Checklist SEO complète',
+      description: 'Les 50 points essentiels pour optimiser votre référencement naturel.',
+      category: 'SEO',
+      type: 'PDF',
+      icon: FileText,
+      duration: '15 min',
+      image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=500&fit=crop',
+    },
+    {
+      title: 'Template de stratégie social media',
+      description: 'Planifiez votre présence sur les réseaux sociaux pour le trimestre.',
+      category: 'Social Media',
+      type: 'Template',
+      icon: Download,
+      duration: '20 min',
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop',
+    },
+    {
+      title: 'Guide Google Ads 2025',
+      description: 'Maîtrisez les campagnes Google Ads de A à Z avec nos conseils d\'experts.',
+      category: 'SEA',
+      type: 'Guide',
+      icon: BookOpen,
+      duration: '45 min',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
+    },
+    {
+      title: 'Formation email marketing',
+      description: 'Créez des campagnes d\'emailing qui convertissent vraiment.',
+      category: 'Emailing',
+      type: 'Vidéo',
+      icon: Video,
+      duration: '30 min',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop',
+    },
+    {
+      title: 'Template d\'audit digital',
+      description: 'Évaluez votre présence en ligne avec notre template professionnel.',
+      category: 'Stratégie',
+      type: 'Template',
+      icon: FileText,
+      duration: '25 min',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+    },
+    {
+      title: 'Guide Analytics & KPIs',
+      description: 'Les métriques essentielles à suivre pour mesurer votre croissance.',
+      category: 'Analytics',
+      type: 'Guide',
+      icon: BookOpen,
+      duration: '35 min',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+    },
+  ];
+
+  const blogPosts = [
+    {
+      title: 'Les tendances marketing digital 2025',
+      excerpt: 'Découvrez les innovations qui vont transformer le marketing cette année.',
+      category: 'Tendances',
+      date: '15 Jan 2025',
+      readTime: '5 min',
+    },
+    {
+      title: 'Comment optimiser votre taux de conversion',
+      excerpt: 'Techniques éprouvées pour transformer plus de visiteurs en clients.',
+      category: 'Conversion',
+      date: '10 Jan 2025',
+      readTime: '8 min',
+    },
+    {
+      title: 'Instagram vs TikTok : Quelle plateforme choisir ?',
+      excerpt: 'Analyse comparative pour maximiser votre présence sur les réseaux sociaux.',
+      category: 'Social Media',
+      date: '5 Jan 2025',
+      readTime: '6 min',
+    },
+  ];
+
   return (
     <div className="bg-white">
       <SEO
@@ -30,7 +114,7 @@ export function ResourcesPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="resources-hero" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
@@ -39,7 +123,7 @@ export function ResourcesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[56px] md:text-[80px] lg:text-[96px] tracking-tight text-black leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight text-black leading-[1.05] mb-6">
               Ressources
             </h1>
           </motion.div>
@@ -56,7 +140,7 @@ export function ResourcesPage() {
       </section>
 
       {/* Featured Resource */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="resources-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <motion.div
@@ -102,7 +186,7 @@ export function ResourcesPage() {
       </section>
 
       {/* Resources Grid */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="resources-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <motion.div
@@ -175,7 +259,7 @@ export function ResourcesPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="resources-content" opacity={0.48} />
         <div className="max-w-[800px] mx-auto text-center relative z-10">
           <motion.div
@@ -212,7 +296,7 @@ export function ResourcesPage() {
       </section>
 
       {/* Blog Preview */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="resources-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <motion.div

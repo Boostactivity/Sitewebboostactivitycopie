@@ -7,7 +7,7 @@ export function PrivacyPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="legal" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
@@ -34,7 +34,7 @@ export function PrivacyPage() {
       </section>
 
       {/* Content */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-about-grid pointer-events-none" />
         <div className="max-w-[900px] mx-auto prose prose-lg relative z-10">
           <motion.div
@@ -61,7 +61,7 @@ export function PrivacyPage() {
               <p className="text-[17px] leading-relaxed mb-4">
                 Le responsable du traitement de vos données personnelles est :
               </p>
-              <ul className="space-y-2 text-[16px]">
+              <ul className="space-y-2 text-[16px] mb-4">
                 <li><strong>Société :</strong> Boost Activity SAS</li>
                 <li><strong>Siège social :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
                 <li><strong>Email :</strong> boostactivityfr@gmail.com</li>
@@ -158,16 +158,20 @@ export function PrivacyPage() {
             <div>
               <h2 className="text-[32px] tracking-tight text-black mb-4">7. Cookies et traceurs</h2>
               <p className="text-[17px] leading-relaxed mb-4">
-                Notre site utilise des cookies pour :
+                Notre site utilise des cookies pour améliorer votre expérience et analyser notre trafic :
               </p>
               <ul className="space-y-2 text-[16px] mb-4">
-                <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site (pas de consentement requis)</li>
-                <li><strong>Cookies analytiques :</strong> Mesure d'audience et analyse du trafic (Google Analytics)</li>
-                <li><strong>Cookies marketing :</strong> Publicité ciblée et retargeting</li>
+                <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site, mémorisation de vos préférences (pas de consentement requis)</li>
+                <li><strong>Cookies analytiques :</strong> Google Analytics 4 (GA4) et Google Tag Manager (GTM) pour mesurer l'audience et analyser le trafic (nécessite votre consentement)</li>
+                <li><strong>Cookies marketing :</strong> Actuellement non utilisés. Si activés à l'avenir, votre consentement sera demandé</li>
               </ul>
+              <p className="text-[17px] leading-relaxed mb-4">
+                <strong>Durée de conservation :</strong> Les cookies analytiques sont conservés 13 mois maximum conformément aux recommandations de la CNIL.
+              </p>
               <p className="text-[17px] leading-relaxed">
-                Vous pouvez gérer vos préférences de cookies à tout moment via notre bandeau de consentement 
-                ou les paramètres de votre navigateur.
+                Vous pouvez gérer vos préférences de cookies à tout moment en cliquant sur "Réinitialiser les cookies" 
+                en bas de page, ou via les paramètres de votre navigateur. Le refus de cookies analytiques n'affecte pas 
+                votre navigation sur le site.
               </p>
             </div>
 

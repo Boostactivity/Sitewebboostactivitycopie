@@ -245,7 +245,7 @@ export function SolutionDetailPage() {
       ],
       caseStudy: {
         title: 'Stratégie Plus',
-        result: '1.2M€ de pipeline en 8 mois',
+        result: '120k€ CA généré',
         link: '/case-studies/cabinet-conseil-strategie',
       },
     },
@@ -393,7 +393,7 @@ export function SolutionDetailPage() {
         schema={combinedSchema}
       />
       {/* Hero Section */}
-      <section className="px-6 lg:px-8 pt-32 pb-20 relative overflow-hidden">
+      <section className="px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 relative overflow-hidden">
         <GradientBackground variant="solutions" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1400px] mx-auto relative z-10">
@@ -443,7 +443,7 @@ export function SolutionDetailPage() {
       </section>
 
       {/* Challenges Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-solutions-grid pointer-events-none" />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.h2
@@ -485,7 +485,7 @@ export function SolutionDetailPage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-solutions-features pointer-events-none" />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.h2
@@ -511,8 +511,8 @@ export function SolutionDetailPage() {
                 <Card className="p-8 border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
                   <div className="absolute inset-0 card-hover-solutions-features">
                   </div>
-                  <div className="flex items-start relative z-10">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[var(--solutions-cyan)]/20 bg-gradient-to-br from-[var(--solutions-cyan-light)]/40 to-[var(--solutions-violet-light)]/40 backdrop-blur-sm flex items-center justify-center mr-6 mt-0.5">
+                  <div className="flex items-center relative z-10">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[var(--solutions-cyan)]/20 bg-gradient-to-br from-[var(--solutions-cyan-light)]/40 to-[var(--solutions-violet-light)]/40 backdrop-blur-sm flex items-center justify-center mr-6">
                       <span className="text-[16px] tracking-tight gradient-text-animated">
                         {String(index + 1).padStart(2, '0')}
                       </span>
@@ -534,7 +534,7 @@ export function SolutionDetailPage() {
       </section>
 
       {/* Results Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-solutions-grid pointer-events-none" />
         <div className="max-w-[1000px] mx-auto relative z-10">
           <motion.h2
@@ -573,7 +573,7 @@ export function SolutionDetailPage() {
       </section>
 
       {/* Case Study CTA */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-solutions-features pointer-events-none" />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -600,7 +600,7 @@ export function SolutionDetailPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="solutions" opacity={0.65} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div

@@ -12,8 +12,8 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'Boost Activity - Agence Marketing Digital Premium | Paris',
-  description = 'Agence de marketing digital haut de gamme à Paris. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. Résultats garantis.',
+  title = 'Boost Activité - Agence Marketing Digital Premium à Paris | Stratégie & SEO',
+  description = 'Boost Activité, agence de marketing digital haut de gamme à Paris. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. Résultats garantis.',
   keywords = 'agence marketing digital, marketing digital Paris, SEO, publicité en ligne, social media, stratégie digitale, Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, agence digitale premium',
   ogType = 'website',
   ogImage = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop',
@@ -22,6 +22,15 @@ export function SEO({
   schema,
 }: SEOProps) {
   useEffect(() => {
+    // Set HTML lang attribute to French
+    document.documentElement.setAttribute('lang', 'fr');
+    
+    // CRITICAL: Prevent Chrome translation prompt on mobile
+    document.documentElement.setAttribute('translate', 'no');
+    if (!document.documentElement.classList.contains('notranslate')) {
+      document.documentElement.classList.add('notranslate');
+    }
+    
     // Set document title
     document.title = title;
 
@@ -30,6 +39,12 @@ export function SEO({
     
     // Set keywords
     setMetaTag('name', 'keywords', keywords);
+
+    // Set content language
+    setMetaTag('http-equiv', 'content-language', 'fr');
+    
+    // Disable Google Translate
+    setMetaTag('name', 'google', 'notranslate');
 
     // Set robots
     setMetaTag('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow');
@@ -40,7 +55,7 @@ export function SEO({
     setMetaTag('property', 'og:type', ogType);
     setMetaTag('property', 'og:image', ogImage);
     setMetaTag('property', 'og:url', canonical || window.location.href);
-    setMetaTag('property', 'og:site_name', 'Boost Activity');
+    setMetaTag('property', 'og:site_name', 'Boost Activité');
     setMetaTag('property', 'og:locale', 'fr_FR');
 
     // Twitter Card tags

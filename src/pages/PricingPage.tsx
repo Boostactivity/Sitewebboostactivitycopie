@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Check, ArrowRight, Zap, Sparkles } from 'lucide-react';
+import { Check, ArrowRight, Zap, Sparkles, Palette, Target, ShoppingCart, Globe, TrendingUp, RefreshCw } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../components/ui/accordion';
 import { GradientBackground } from '../components/GradientBackground';
 import { FloatingShapes } from '../components/FloatingShapes';
 import { SEO } from '../components/SEO';
@@ -11,6 +13,7 @@ import { breadcrumbSchema, offerSchema } from '../utils/seo/schemas';
 
 export function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
 
   const pageSchema = breadcrumbSchema([
     { name: 'Accueil', url: 'https://boostactivity.fr' },
@@ -33,7 +36,7 @@ export function PricingPage() {
     <div className="bg-white">
       <SEO
         title="Tarifs Marketing Digital - Packs & Abonnements | Boost Activity"
-        description="Tarifs transparents pour votre marketing digital : Pack Starter 490€/mois, Growth 990€/mois, Performance 1990€/mois. Services sur-mesure disponibles. Devis gratuit."
+        description="Tarifs transparents : Starter 490€/mois, Growth 990€/mois, Performance 1990€/mois. Services sur-mesure disponibles. Devis gratuit."
         keywords="tarif marketing digital, prix SEO, prix publicité en ligne, abonnement marketing, pack marketing digital, devis marketing"
         ogImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
         canonical="https://boostactivity.fr/pricing"
@@ -49,7 +52,7 @@ export function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
               <span className="text-black">Tarifs & </span>
               <span className="gradient-text-animated">Offres</span>
             </h1>
@@ -92,7 +95,7 @@ export function PricingPage() {
                 icon: Sparkles,
                 name: 'Starter',
                 price: '490',
-                period: 'par mois',
+                period: '/mois',
                 description: 'Idéal pour démarrer votre présence digitale',
                 features: [
                   'Site web 5 pages',
@@ -111,16 +114,16 @@ export function PricingPage() {
                 icon: Zap,
                 name: 'Growth',
                 price: '990',
-                period: 'par mois',
+                period: '/mois',
                 description: 'Pour accélérer votre croissance',
                 features: [
                   'Site web 10-15 pages',
                   'SEO avancé + blog',
-                  'Campagnes publicitaires (budget inclus 1000€)',
+                  'Campagnes publicitaires (Budget inclus 1000€)',
                   'Gestion réseaux sociaux (5 plateformes)',
                   '5 posts par semaine',
                   'Email marketing automation',
-                  'CRM setup & intégration',
+                  'CRM Setup & intégration',
                   'Rapports hebdomadaires',
                   'Support prioritaire',
                   'Réunion stratégique mensuelle',
@@ -134,7 +137,7 @@ export function PricingPage() {
                 icon: ArrowRight,
                 name: 'Performance',
                 price: '1990',
-                period: 'par mois',
+                period: '/mois',
                 description: 'Solution complète et personnalisée',
                 features: [
                   'Tout de Growth, plus :',
@@ -198,8 +201,8 @@ export function PricingPage() {
                       <div className="flex items-baseline">
                         <span className="text-[56px] tracking-tight text-black">{plan.price}</span>
                         {plan.price !== 'Sur devis' && <span className="text-[17px] text-gray-600 ml-1">€</span>}
+                        <span className="text-[14px] text-gray-600 ml-2">{plan.period}</span>
                       </div>
-                      <p className="text-[14px] text-gray-600">{plan.period}</p>
                     </div>
 
                     <ul className="space-y-4 mb-8 flex-grow">
@@ -254,37 +257,50 @@ export function PricingPage() {
             </p>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 name: 'Branding & Identité',
-                starter: '490€ - 1,500€',
+                priceFrom: '490',
+                priceTo: '1,500',
                 description: 'Logo, charte graphique, brand book',
+                icon: Palette,
               },
               {
                 name: 'Stratégie digitale',
-                starter: '490€ - 2,490€',
+                priceFrom: '490',
+                priceTo: '2,490',
                 description: 'Audit, analyse, roadmap 12-24 mois',
+                icon: TrendingUp,
               },
               {
-                name: 'Campagne SEA (setup)',
-                starter: '590€ + budget pub',
+                name: 'Campagne SEA (Setup)',
+                priceFrom: '590',
+                priceTo: null,
                 description: 'Setup Google Ads / Meta Ads + 1er mois gestion',
+                icon: Target,
+                badge: '+ Budget pub',
               },
               {
                 name: 'Création de site web',
-                starter: '990€ - 2,500€',
+                priceFrom: '990',
+                priceTo: '2,500',
                 description: 'Site vitrine 5-10 pages, responsive, CMS inclus',
+                icon: Globe,
               },
               {
                 name: 'E-commerce complet',
-                starter: '1,090€ - 3,500€',
+                priceFrom: '1,090',
+                priceTo: '3,500',
                 description: 'Boutique en ligne complète avec paiement et gestion',
+                icon: ShoppingCart,
               },
               {
                 name: 'Refonte site existant',
-                starter: '2,200€ - 5,000€',
+                priceFrom: '2,200',
+                priceTo: '5,000',
                 description: 'Modernisation et optimisation de votre site',
+                icon: RefreshCw,
               },
             ].map((service, index) => (
               <motion.div
@@ -294,18 +310,44 @@ export function PricingPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
               >
-                <Card className="p-8 border-gray-200 bg-white/80 backdrop-blur-sm transition-all duration-500 group relative overflow-hidden hover:shadow-lg">
-                  <div className="absolute inset-0 card-hover-pricing-features">
-                  </div>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between relative z-10">
-                    <div className="mb-4 md:mb-0">
-                      <h3 className="text-[24px] tracking-tight gradient-text-animated mb-2">
-                        {service.name}
-                      </h3>
-                      <p className="text-[14px] text-gray-600">{service.description}</p>
+                <Card className="p-6 border border-gray-200 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-all duration-500 group relative overflow-hidden h-full">
+                  {/* Effet gradient synchronisé avec le background */}
+                  <div className="absolute inset-0 card-hover-pricing-plans opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative z-10">
+                    {/* Icon & Badge */}
+                    <div className="flex items-start justify-between mb-4">
+                      <service.icon className="w-6 h-6 text-gray-600 group-hover:text-black transition-colors duration-300" />
+                      {service.badge && (
+                        <span className="text-[10px] px-2.5 py-1 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 border border-purple-200">
+                          {service.badge}
+                        </span>
+                      )}
                     </div>
-                    <div className="text-[21px] tracking-tight text-black md:text-right">
-                      {service.starter}
+                    
+                    <h3 className="text-[21px] tracking-tight gradient-text-animated mb-2">
+                      {service.name}
+                    </h3>
+                    
+                    <p className="text-[13px] text-gray-600 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    {/* Price */}
+                    <div className="pt-4 border-t border-gray-200">
+                      <div className="flex items-baseline gap-1.5">
+                        <span className="text-[10px] text-gray-500 uppercase tracking-wider font-light">À partir de</span>
+                      </div>
+                      <div className="flex items-baseline mt-1.5 gap-1">
+                        <span className="text-[32px] tracking-tight text-black font-light">{service.priceFrom}</span>
+                        {service.priceTo && (
+                          <>
+                            <span className="text-[16px] text-gray-400 mx-1">—</span>
+                            <span className="text-[32px] tracking-tight text-black font-light">{service.priceTo}</span>
+                          </>
+                        )}
+                        <span className="text-[16px] text-gray-600 font-light">€</span>
+                      </div>
                     </div>
                   </div>
                 </Card>

@@ -3,8 +3,8 @@
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Boost Activity',
-  alternateName: 'Boost Activity - Agence Marketing Digital',
+  name: 'Boost Activité',
+  alternateName: 'Boost Activité - Agence Marketing Digital',
   url: 'https://boostactivity.fr',
   logo: 'https://boostactivity.fr/logo.png',
   description: 'Agence de marketing digital premium à Paris spécialisée en SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses.',
@@ -40,7 +40,9 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Boost Activity',
+  name: 'Boost Activité',
+  alternateName: 'Boost Activité - Agence Marketing Digital Paris',
+  description: 'Agence de marketing digital premium à Paris spécialisée en stratégie digitale, SEO/SEA, social media et acquisition client pour PME et entreprises ambitieuses.',
   image: 'https://boostactivity.fr/logo.png',
   '@id': 'https://boostactivity.fr',
   url: 'https://boostactivity.fr',
@@ -49,7 +51,9 @@ export const localBusinessSchema = {
   priceRange: '€€€',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Paris',
     addressLocality: 'Paris',
+    postalCode: '75000',
     addressCountry: 'FR',
   },
   geo: {
@@ -70,17 +74,61 @@ export const localBusinessSchema = {
     bestRating: '5',
     worstRating: '1',
   },
+  sameAs: [
+    'https://www.facebook.com/boostactivity',
+    'https://www.instagram.com/boostactivity',
+    'https://www.linkedin.com/company/boostactivity',
+    'https://twitter.com/boostactivity',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Fondateur Boost Activité',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'France',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Services de Marketing Digital',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Stratégie Digitale',
+          description: 'Définition de vision claire et objectifs mesurables pour votre croissance en ligne',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'SEO & SEA',
+          description: 'Référencement naturel et payant pour dominer les résultats de recherche',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Social Media Marketing',
+          description: 'Gestion et optimisation de vos réseaux sociaux pour engagement maximal',
+        },
+      },
+    ],
+  },
 };
 
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Boost Activity',
+  name: 'Boost Activité',
   url: 'https://boostactivity.fr',
   description: 'Agence de marketing digital premium à Paris',
   publisher: {
     '@type': 'Organization',
-    name: 'Boost Activity',
+    name: 'Boost Activité',
     logo: {
       '@type': 'ImageObject',
       url: 'https://boostactivity.fr/logo.png',
@@ -197,3 +245,6 @@ export const offerSchema = (offer: {
   ...(offer.validThrough && { validThrough: offer.validThrough }),
   availability: 'https://schema.org/InStock',
 });
+
+// Alias pour compatibilité avec BlogPostPage
+export const generateArticleSchema = articleSchema;

@@ -1,22 +1,78 @@
-# Boost Activity - Robots.txt
-# https://boostactivity.fr
+# Robots.txt optimisé pour boostactivity.fr
+# Dernière mise à jour : 2024-11-25
 
+# User-agent général
 User-agent: *
 Allow: /
+
+# Bloquer les zones admin et privées
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /supabase/
+
+# Bloquer les fichiers système
+Disallow: /*.json$
+Disallow: /*.xml$ 
+Disallow: /*.txt$
+
+# Permettre les images et CSS/JS pour le SEO
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.gif$
+
+# Bloquer les paramètres de recherche pour éviter duplicate content
+Disallow: /*?*search=
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*session=
+
+# User-agents spécifiques
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# Bloquer les bots malveillants
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 # Sitemap
 Sitemap: https://boostactivity.fr/sitemap.xml
 
-# Crawl Delay (optional, for heavy crawlers)
-Crawl-delay: 1
-
-# Disallow paths (if any)
-Disallow: /api/
-Disallow: /admin/
-Disallow: /*.json$
-Disallow: /supabase/
-
-# Allow important resources
-Allow: /styles/
-Allow: /components/
-Allow: /images/
+# Host (domaine canonique)
+Host: https://boostactivity.fr

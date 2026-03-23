@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
+import { memo } from 'react';
 
-export function FloatingShapes() {
+export const FloatingShapes = memo(function FloatingShapes() {
   const shapes = [
     { type: 'circle', size: 60, x: '15%', y: '10%', delay: 0, duration: 15, color: 'var(--primary)' },
     { type: 'square', size: 40, x: '85%', y: '20%', delay: 2, duration: 18, color: 'var(--accent-purple)' },
@@ -19,6 +20,7 @@ export function FloatingShapes() {
           style={{
             left: shape.x,
             top: shape.y,
+            willChange: 'transform, opacity',
           }}
           animate={{
             y: [0, -100, 0],
@@ -69,4 +71,4 @@ export function FloatingShapes() {
       ))}
     </div>
   );
-}
+});

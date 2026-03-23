@@ -6,7 +6,7 @@ export function LegalPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="legal-hero" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
@@ -15,7 +15,7 @@ export function LegalPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[56px] md:text-[80px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] tracking-tight leading-[1.05] mb-5 sm:mb-6">
               <span className="text-black">Mentions </span>
               <span className="gradient-text-animated">légales</span>
             </h1>
@@ -25,7 +25,7 @@ export function LegalPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-[17px] text-gray-600 leading-relaxed"
+            className="text-[14px] sm:text-[16px] md:text-[17px] text-gray-600 leading-relaxed"
           >
             Dernière mise à jour : 4 novembre 2025
           </motion.p>
@@ -33,7 +33,7 @@ export function LegalPage() {
       </section>
 
       {/* Content */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="legal-content" opacity={0.48} />
         <div className="max-w-[900px] mx-auto prose prose-lg relative z-10">
           <motion.div
@@ -48,11 +48,8 @@ export function LegalPage() {
               <p className="text-[17px] leading-relaxed mb-4">
                 Le site web Boost Activity est édité par :
               </p>
-              <ul className="space-y-2 text-[16px]">
-                <li><strong>Raison sociale :</strong> Boost Activity SAS</li>
-                <li><strong>Capital social :</strong> 42 000 €</li>
-                <li><strong>SIRET :</strong> 850 123 456 00015</li>
-                <li><strong>TVA intracommunautaire :</strong> FR 12 850123456</li>
+              <ul className="space-y-2 text-[16px] mb-4">
+                <li><strong>Société :</strong> Boost Activity SAS</li>
                 <li><strong>Siège social :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
                 <li><strong>Téléphone :</strong> +33 6 60 96 85 16</li>
                 <li><strong>Email :</strong> boostactivityfr@gmail.com</li>

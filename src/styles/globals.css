@@ -1,4 +1,12 @@
+@import "tailwindcss";
+
 @custom-variant dark (&:is(.dark *));
+
+/* Import des optimisations de performance pour Core Web Vitals */
+@import './performance.css';
+
+/* Import des styles d'accessibilité WCAG 2.1 Level AA */
+@import './accessibility.css';
 
 :root {
   --font-size: 16px;
@@ -788,6 +796,31 @@ html {
   .reveal-on-scroll.revealed {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  /* ===== OPTIMISATIONS PERFORMANCES ANIMATIONS ===== */
+  
+  /* Forcer l'accélération GPU sur tous les éléments animés */
+  [data-motion],
+  [class*="motion"],
+  .motion-div {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Optimiser les animations au scroll */
+  [data-motion="whileInView"] {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
+  
+  /* Réduire la complexité des animations sur mobile */
+  @media (max-width: 768px) {
+    [data-motion] {
+      animation-duration: 0.3s !important;
+      transition-duration: 0.3s !important;
+    }
   }
   
   /* Gradient text animation */

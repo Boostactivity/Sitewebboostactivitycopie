@@ -29,8 +29,8 @@ export function CaseStudyDetailPage() {
       timeline: '6 mois',
       services: ['Site web + réservation', 'SEO Local', 'Social Media', 'Google Ads', 'Gestion réputation'],
       testimonial: {
-        text: 'Grâce à Boost Activity, nous avons enfin compris le digital. Les réservations ont explosé et notre restaurant est maintenant rempli tous les soirs de la semaine.',
-        author: 'Pierre Durand',
+        text: 'Grâce à Boost Activity, nous avons enfin compris le digital. Les réservations ont explosé de 240% et notre restaurant est maintenant rempli presque tous les soirs de la semaine.',
+        author: 'Karim Alami',
         role: 'Chef & Propriétaire',
       },
       results: [
@@ -58,8 +58,8 @@ export function CaseStudyDetailPage() {
       timeline: '4 mois',
       services: ['Branding', 'E-commerce', 'Instagram Ads', 'Email Marketing', 'Content Creation'],
       testimonial: {
-        text: 'Ils ont transformé notre vision en réalité. En 4 mois, nous avons généré plus de CA en ligne que notre boutique physique en un an.',
-        author: 'Sophie Martin',
+        text: 'Ils ont transformé ma vision en réalité. En 4 mois, nous avons généré 150K€ de CA en ligne grâce à leur expertise e-commerce complète.',
+        author: 'Laura Chen',
         role: 'Fondatrice',
       },
       results: [
@@ -87,8 +87,8 @@ export function CaseStudyDetailPage() {
       timeline: '90 jours',
       services: ['Facebook Ads', 'Content Marketing', 'App mobile', 'Marketing Automation', 'CRM'],
       testimonial: {
-        text: 'En 3 mois, nous avons plus que doublé nos membres actifs. L\'automatisation et le contenu ont complètement changé notre relation client.',
-        author: 'Marc Dubois',
+        text: 'En 3 mois, nous avons plus que doublé nos membres actifs et augmenté nos revenus de 142%. L\'automatisation et le contenu ont complètement changé notre relation client.',
+        author: 'Mohamed Diallo',
         role: 'Directeur FitPro',
       },
       results: [
@@ -186,7 +186,7 @@ export function CaseStudyDetailPage() {
         schema={combinedSchema}
       />
       {/* Hero Section */}
-      <section className="px-6 lg:px-8 pt-32 pb-20 relative overflow-hidden">
+      <section className="px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-hero pointer-events-none" />
         <FloatingShapes />
         <div className="max-w-[1400px] mx-auto relative z-10">
