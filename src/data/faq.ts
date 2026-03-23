@@ -24,8 +24,8 @@ export const faqItems: FAQItem[] = [
   // ===== SERVICES =====
   {
     id: '1',
-    question: 'Quels services proposez-vous chez Boost Activité ?',
-    answer: `Boost Activité propose une gamme complète de services de marketing digital :
+    question: 'Quels services proposez-vous chez Boost Activity ?',
+    answer: `Boost Activity propose une gamme complète de services de marketing digital :
 
 **1. Référencement SEO**
 - Audit SEO complet
@@ -130,7 +130,7 @@ Contactez-nous pour un devis personnalisé gratuit !`,
   {
     id: '4',
     question: 'Proposez-vous des forfaits sans engagement ?',
-    answer: `Oui ! Chez Boost Activité, nous proposons des **forfaits sans engagement** avec préavis d'1 mois.
+    answer: `Oui ! Chez Boost Activity, nous proposons des **forfaits sans engagement** avec préavis d'1 mois.
 
 **Pourquoi sans engagement ?**
 - Nous croyons en la qualité de notre travail
@@ -161,7 +161,7 @@ Nos clients restent en moyenne **3+ ans** avec nous, car ils voient les résulta
   // ===== PROCESSUS =====
   {
     id: '5',
-    question: 'Comment se déroule la collaboration avec Boost Activité ?',
+    question: 'Comment se déroule la collaboration avec Boost Activity ?',
     answer: `Notre processus de collaboration est structuré en **5 étapes clés** :
 
 **1. Découverte & Audit (Semaine 1)**
@@ -468,7 +468,7 @@ Si votre site a plus de 5 ans et n'est pas responsive, nous pouvons recommander 
   // ===== GÉNÉRAL =====
   {
     id: '11',
-    question: 'Pourquoi choisir Boost Activité plutôt qu\'une autre agence ?',
+    question: 'Pourquoi choisir Boost Activity plutôt qu\'une autre agence ?',
     answer: `Voici ce qui nous différencie des autres agences :
 
 **1. Expertise Prouvée**
@@ -532,7 +532,7 @@ Si votre site a plus de 5 ans et n'est pas responsive, nous pouvons recommander 
 - Disponibles et investis
 
 **Ce que disent nos clients :**
-"Boost Activité a transformé notre présence en ligne. +240% de trafic en 8 mois !" - Marie, Cabinet d'Avocats
+"Boost Activity a transformé notre présence en ligne. +240% de trafic en 8 mois !" - Marie, Cabinet d'Avocats
 
 "Enfin une agence qui tient ses promesses et répond rapidement !" - Thomas, E-commerce
 
@@ -541,7 +541,7 @@ Si votre site a plus de 5 ans et n'est pas responsive, nous pouvons recommander 
 **Essayez Sans Risque :**
 Premier mois sans engagement. Si vous n'êtes pas satisfait, vous partez sans payer. Simple.`,
     category: 'general',
-    keywords: ['pourquoi Boost Activité', 'différenciation agence', 'avantages'],
+    keywords: ['pourquoi Boost Activity', 'différenciation agence', 'avantages'],
   },
 
   {

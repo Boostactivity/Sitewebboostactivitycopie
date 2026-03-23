@@ -14,7 +14,7 @@ export function CookieConsent({ onAccept, onDecline }: CookieConsentProps) {
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({
     necessary: true, // Always true, can't be disabled
-    analytics: true,
+    analytics: false, // RGPD : désactivé par défaut, l'utilisateur doit consentir explicitement
     marketing: false,
   });
 

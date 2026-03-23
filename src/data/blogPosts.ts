@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     id: '1',
     slug: 'comment-ameliorer-seo-site-web-2024',
     title: 'Comment Améliorer le SEO de Votre Site Web en 2024 : Guide Complet',
-    metaTitle: 'Améliorer le SEO en 2024 : Guide Complet pour TPE/PME | Boost Activité',
+    metaTitle: 'Améliorer le SEO en 2024 : Guide Complet pour TPE/PME | Boost Activity',
     metaDescription: 'Découvrez les 10 stratégies SEO essentielles pour améliorer le référencement de votre site web en 2024. Guide pratique avec exemples concrets.',
     excerpt: 'Le SEO évolue constamment. Découvrez les stratégies les plus efficaces en 2024 pour améliorer votre référencement naturel et attirer plus de clients.',
     content: `
@@ -227,12 +227,12 @@ Le SEO en 2024 nécessite une approche holistique qui combine **technique**, **c
 3. Créer un calendrier éditorial
 4. Commencer le link building
 
-Besoin d'aide pour votre SEO ? [Contactez Boost Activité](/contact) pour un audit gratuit !
+Besoin d'aide pour votre SEO ? [Contactez Boost Activity](/contact) pour un audit gratuit !
     `,
     category: 'seo',
     tags: ['SEO', 'Référencement', 'Google', 'Core Web Vitals', 'Marketing Digital'],
     author: {
-      name: 'Équipe Boost Activité',
+      name: 'Équipe Boost Activity',
       role: 'Experts SEO',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop',
     },
@@ -257,7 +257,7 @@ Besoin d'aide pour votre SEO ? [Contactez Boost Activité](/contact) pour un aud
     id: '2',
     slug: 'strategie-reseaux-sociaux-pme',
     title: 'Stratégie Réseaux Sociaux pour PME : Le Guide 2024',
-    metaTitle: 'Stratégie Réseaux Sociaux PME 2024 : Guide Complet | Boost Activité',
+    metaTitle: 'Stratégie Réseaux Sociaux PME 2024 : Guide Complet | Boost Activity',
     metaDescription: 'Découvrez comment créer une stratégie réseaux sociaux efficace pour votre PME en 2024. Guide pratique avec exemples et templates.',
     excerpt: 'Les réseaux sociaux sont essentiels pour les PME. Apprenez à créer une stratégie efficace qui génère de vrais résultats commerciaux.',
     content: `
@@ -437,12 +437,12 @@ Une stratégie réseaux sociaux efficace pour PME repose sur :
 3. Créer un calendrier éditorial pour 1 mois
 4. Commencer à publier et mesurer
 
-Besoin d'aide ? [Contactez Boost Activité](/contact) pour une stratégie sur mesure !
+Besoin d'aide ? [Contactez Boost Activity](/contact) pour une stratégie sur mesure !
     `,
     category: 'reseaux-sociaux',
     tags: ['Réseaux Sociaux', 'Social Media', 'PME', 'Stratégie', 'Instagram', 'LinkedIn'],
     author: {
-      name: 'Équipe Boost Activité',
+      name: 'Équipe Boost Activity',
       role: 'Experts Social Media',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop',
     },
@@ -466,7 +466,7 @@ Besoin d'aide ? [Contactez Boost Activité](/contact) pour une stratégie sur me
     id: '3',
     slug: 'google-ads-vs-seo-que-choisir',
     title: 'Google Ads vs SEO : Que Choisir pour Votre Entreprise ?',
-    metaTitle: 'Google Ads vs SEO : Comparaison Complète 2024 | Boost Activité',
+    metaTitle: 'Google Ads vs SEO : Comparaison Complète 2024 | Boost Activity',
     metaDescription: 'Google Ads ou SEO ? Découvrez les avantages, inconvénients et coûts de chaque stratégie pour faire le bon choix pour votre entreprise.',
     excerpt: 'Google Ads et SEO sont deux stratégies complémentaires mais différentes. Découvrez laquelle convient le mieux à votre business.',
     content: `
@@ -684,12 +684,12 @@ Le débat **Google Ads vs SEO** revient constamment. Faut-il investir dans la pu
 3. Allouer 70% court terme + 30% long terme
 4. Mesurer et ajuster chaque mois
 
-Besoin d'aide pour votre stratégie ? [Contactez Boost Activité](/contact) pour un plan sur mesure !
+Besoin d'aide pour votre stratégie ? [Contactez Boost Activity](/contact) pour un plan sur mesure !
     `,
     category: 'marketing-digital',
     tags: ['Google Ads', 'SEO', 'Référencement Payant', 'Marketing Digital', 'ROI'],
     author: {
-      name: 'Équipe Boost Activité',
+      name: 'Équipe Boost Activity',
       role: 'Experts Marketing Digital',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop',
     },

@@ -12,8 +12,8 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'Boost Activité - Agence Marketing Digital Premium à Paris | Stratégie & SEO',
-  description = 'Boost Activité, agence de marketing digital haut de gamme à Paris. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. Résultats garantis.',
+  title = 'Boost Activity - Agence Marketing Digital Premium à Paris | Stratégie & SEO',
+  description = 'Boost Activity, agence de marketing digital haut de gamme à Paris. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. Résultats garantis.',
   keywords = 'agence marketing digital, marketing digital Paris, SEO, publicité en ligne, social media, stratégie digitale, Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, agence digitale premium',
   ogType = 'website',
   ogImage = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop',
@@ -55,7 +55,7 @@ export function SEO({
     setMetaTag('property', 'og:type', ogType);
     setMetaTag('property', 'og:image', ogImage);
     setMetaTag('property', 'og:url', canonical || window.location.href);
-    setMetaTag('property', 'og:site_name', 'Boost Activité');
+    setMetaTag('property', 'og:site_name', 'Boost Activity');
     setMetaTag('property', 'og:locale', 'fr_FR');
 
     // Twitter Card tags

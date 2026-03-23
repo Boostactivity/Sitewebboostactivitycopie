@@ -183,7 +183,7 @@ export function BlogPostPage() {
               Besoin d'aide pour votre stratégie marketing ?
             </h3>
             <p className="text-gray-600 mb-6">
-              Boost Activité vous accompagne dans la mise en place de votre stratégie de marketing digital. Contactez-nous pour un audit gratuit.
+              Boost Activity vous accompagne dans la mise en place de votre stratégie de marketing digital. Contactez-nous pour un audit gratuit.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-black text-white hover:bg-gray-800">

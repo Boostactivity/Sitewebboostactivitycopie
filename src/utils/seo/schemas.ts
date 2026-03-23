@@ -3,8 +3,8 @@
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Boost Activité',
-  alternateName: 'Boost Activité - Agence Marketing Digital',
+  name: 'Boost Activity',
+  alternateName: 'Boost Activity - Agence Marketing Digital',
   url: 'https://boostactivity.fr',
   logo: 'https://boostactivity.fr/logo.png',
   description: 'Agence de marketing digital premium à Paris spécialisée en SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses.',
@@ -40,8 +40,8 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Boost Activité',
-  alternateName: 'Boost Activité - Agence Marketing Digital Paris',
+  name: 'Boost Activity',
+  alternateName: 'Boost Activity - Agence Marketing Digital Paris',
   description: 'Agence de marketing digital premium à Paris spécialisée en stratégie digitale, SEO/SEA, social media et acquisition client pour PME et entreprises ambitieuses.',
   image: 'https://boostactivity.fr/logo.png',
   '@id': 'https://boostactivity.fr',
@@ -82,7 +82,7 @@ export const localBusinessSchema = {
   ],
   founder: {
     '@type': 'Person',
-    name: 'Fondateur Boost Activité',
+    name: 'Fondateur Boost Activity',
   },
   areaServed: {
     '@type': 'Country',
@@ -123,12 +123,12 @@ export const localBusinessSchema = {
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Boost Activité',
+  name: 'Boost Activity',
   url: 'https://boostactivity.fr',
   description: 'Agence de marketing digital premium à Paris',
   publisher: {
     '@type': 'Organization',
-    name: 'Boost Activité',
+    name: 'Boost Activity',
     logo: {
       '@type': 'ImageObject',
       url: 'https://boostactivity.fr/logo.png',
