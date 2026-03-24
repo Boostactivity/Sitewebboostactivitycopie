@@ -214,7 +214,7 @@ export function CaseStudyDetailPage() {
             <h1 className="text-[56px] md:text-[80px] tracking-tight text-black leading-[1.05] mb-6">
               {study.title}
             </h1>
-            <p className="text-[21px] text-gray-600">{study.location}</p>
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600">{study.location}</p>
           </motion.div>
 
           <motion.div
@@ -233,7 +233,7 @@ export function CaseStudyDetailPage() {
       </section>
 
       {/* Key Metrics */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-stats pointer-events-none" />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -265,7 +265,7 @@ export function CaseStudyDetailPage() {
       </section>
 
       {/* Challenge & Solution */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-hero pointer-events-none" />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -303,7 +303,7 @@ export function CaseStudyDetailPage() {
       </section>
 
       {/* Services & Timeline */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-grid pointer-events-none" />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -340,7 +340,7 @@ export function CaseStudyDetailPage() {
       </section>
 
       {/* Results */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-hero pointer-events-none" />
         <div className="max-w-[1000px] mx-auto relative z-10">
           <motion.h2
@@ -348,7 +348,7 @@ export function CaseStudyDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             Résultats obtenus
           </motion.h2>
@@ -378,7 +378,7 @@ export function CaseStudyDetailPage() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-stats pointer-events-none" />
         <div className="max-w-[900px] mx-auto text-center relative z-10">
           <motion.div
@@ -387,7 +387,7 @@ export function CaseStudyDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[28px] md:text-[32px] tracking-tight text-black leading-relaxed mb-12">
+            <p className="text-[28px] md:text-[32px] tracking-tight text-black leading-relaxed mb-8 sm:mb-10 md:mb-12">
               "{study.testimonial.text}"
             </p>
             <div>
@@ -399,7 +399,7 @@ export function CaseStudyDetailPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-cases-hero pointer-events-none" />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -408,12 +408,12 @@ export function CaseStudyDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-6 sm:mb-7 md:mb-8">
               Prêt pour votre
               <br />
               success story ?
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Discutons de votre projet et découvrons ensemble comment atteindre vos objectifs.
             </p>
             <Link to="/contact">

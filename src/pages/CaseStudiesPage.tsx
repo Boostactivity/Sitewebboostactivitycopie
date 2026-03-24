@@ -126,7 +126,7 @@ export function CaseStudiesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-4 sm:mb-5 md:mb-6">
               <span className="gradient-text-animated">Études de cas</span>
             </h1>
           </motion.div>
@@ -135,7 +135,7 @@ export function CaseStudiesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
+            className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
           >
             Découvrez comment nous avons aidé nos clients à atteindre et dépasser leurs objectifs de croissance digitale.
           </motion.p>
@@ -146,7 +146,7 @@ export function CaseStudiesPage() {
       <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="cases-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {[
               { icon: TrendingUp, label: 'Résultats mesurables', value: '100%' },
               { icon: Users, label: 'Clients accompagnés', value: '35+' },
@@ -159,12 +159,12 @@ export function CaseStudiesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="p-8 text-center border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
+                <Card className="p-6 sm:p-7 md:p-8 text-center border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
                   <div className="absolute inset-0 card-hover-cases-stats">
                   </div>
                   <div className="relative z-10">
                     <item.icon className="w-10 h-10 text-gray-800 mx-auto mb-4" />
-                    <div className="text-[48px] tracking-tight gradient-text-animated mb-2">{item.value}</div>
+                    <div className="text-[36px] sm:text-[42px] md:text-[48px] tracking-tight gradient-text-animated mb-2">{item.value}</div>
                     <div className="text-[14px] text-gray-600">{item.label}</div>
                   </div>
                 </Card>
@@ -178,7 +178,7 @@ export function CaseStudiesPage() {
       <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="cases-content" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.slug}
@@ -201,29 +201,29 @@ export function CaseStudiesPage() {
                         />
                       </div>
                       
-                      <div className="p-8">
+                      <div className="p-5 sm:p-6 md:p-8">
                         <div className="flex items-center gap-2 mb-4">
                           <Badge variant="secondary" className="text-[12px]">
                             {study.category}
                           </Badge>
                         </div>
                         
-                        <h3 className="text-[32px] tracking-tight gradient-text-animated mb-3">
+                        <h3 className="text-[24px] sm:text-[28px] md:text-[32px] tracking-tight gradient-text-animated mb-2 sm:mb-3">
                           {study.title}
                         </h3>
                         
-                        <p className="text-[16px] text-gray-600 mb-4">
+                        <p className="text-[14px] sm:text-[15px] md:text-[16px] text-gray-600 mb-3 sm:mb-4">
                           {study.description}
                         </p>
                         
-                        <div className="text-[21px] tracking-tight text-black mb-6">
+                        <div className="text-[17px] sm:text-[19px] md:text-[21px] tracking-tight text-black mb-4 sm:mb-6">
                           Résultats :
                         </div>
                         
-                        <div className="grid grid-cols-3 gap-4 mb-6 py-6 border-t border-b border-gray-200">
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 py-4 sm:py-6 border-t border-b border-gray-200">
                           {study.results.map((metric) => (
                             <div key={metric.label} className="text-center">
-                              <div className="text-[24px] tracking-tight gradient-text-animated mb-1">
+                              <div className="text-[18px] sm:text-[21px] md:text-[24px] tracking-tight gradient-text-animated mb-1">
                                 {metric.value}
                               </div>
                               <div className="text-[12px] text-gray-600">
@@ -247,7 +247,7 @@ export function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="cases-cta" opacity={0.58} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -256,17 +256,17 @@ export function CaseStudiesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-7 md:mb-8">
               <span className="gradient-text-animated">Écrivons ensemble</span>
               <br />
               <span className="text-black">votre </span>
               <span className="gradient-text-animated">success story</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Rejoignez les entreprises qui ont choisi Boost Activity pour accélérer leur croissance.
             </p>
             <Link to="/contact">
-              <button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+              <button className="w-full sm:w-auto gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
                 Démarrer votre projet
               </button>
             </Link>

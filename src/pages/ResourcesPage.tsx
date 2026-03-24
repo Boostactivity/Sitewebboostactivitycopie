@@ -132,7 +132,7 @@ export function ResourcesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
+            className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
           >
             Guides pratiques, templates et conseils d'experts pour accélérer votre croissance digitale.
           </motion.p>
@@ -196,10 +196,10 @@ export function ResourcesPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-4 sm:mb-5 md:mb-6">
               Toutes les ressources
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
               Accédez gratuitement à notre bibliothèque complète
             </p>
           </motion.div>
@@ -269,11 +269,11 @@ export function ResourcesPage() {
             transition={{ duration: 0.8 }}
           >
             <Lightbulb className="w-12 h-12 text-gray-800 mx-auto mb-6" />
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-4 sm:mb-5 md:mb-6">
               <span className="gradient-text-animated">Recevez</span>
               <span className="text-black"> nos meilleures ressources</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12">
               Inscrivez-vous à notre newsletter et recevez chaque semaine des conseils, guides et tendances marketing.
             </p>
             
@@ -306,10 +306,10 @@ export function ResourcesPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-4 sm:mb-5 md:mb-6">
               Derniers articles du blog
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
               Conseils et actualités pour rester à la pointe du marketing digital
             </p>
           </motion.div>
@@ -361,7 +361,7 @@ export function ResourcesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="resources-cta" opacity={0.58} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -370,12 +370,12 @@ export function ResourcesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight text-black leading-tight mb-6 sm:mb-7 md:mb-8">
               Besoin d'aide pour
               <br />
               passer à l'action ?
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Les ressources c'est bien, un accompagnement personnalisé c'est encore mieux.
             </p>
             <Link to="/contact">

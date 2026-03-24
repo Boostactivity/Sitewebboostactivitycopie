@@ -234,7 +234,7 @@ export function ContactPage() {
                 <div className="absolute inset-0 card-hover-contact-form opacity-30"></div>
                 
                 <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 relative z-10">
-                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-[13px] sm:text-[14px]">Prénom *</Label>
                       <Input

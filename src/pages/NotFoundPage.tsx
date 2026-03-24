@@ -38,21 +38,21 @@ export function NotFoundPage() {
       <div className="min-h-screen bg-white flex items-center justify-center relative overflow-hidden">
         <FloatingShapes />
 
-        <div className="max-w-4xl mx-auto px-6 py-24 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-5 md:px-6 lg:px-8 py-16 sm:py-20 md:py-24 text-center relative z-10">
           {/* Error Code */}
-          <div className="mb-8">
-            <h1 className="text-[200px] leading-none font-bold bg-gradient-to-r from-resources-amber to-services-sky bg-clip-text text-transparent">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-[100px] sm:text-[150px] md:text-[200px] leading-none font-bold bg-gradient-to-r from-resources-amber to-services-sky bg-clip-text text-transparent">
               404
             </h1>
           </div>
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl mb-6">
+          <h2 className="text-[28px] sm:text-[36px] md:text-[48px] leading-tight mb-4 sm:mb-5 md:mb-6">
             Oups ! Page introuvable
           </h2>
 
           {/* Description */}
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto">
             La page que vous recherchez n'existe pas, a été déplacée ou est temporairement indisponible.
             Mais ne vous inquiétez pas, nous allons vous aider à trouver ce que vous cherchez !
           </p>

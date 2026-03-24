@@ -16,7 +16,7 @@ export function PrivacyPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[56px] md:text-[80px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] tracking-tight leading-[1.05] mb-4 sm:mb-5 md:mb-6">
               <span className="gradient-text-animated">Politique</span>
               <span className="text-black"> de confidentialité</span>
             </h1>
@@ -26,7 +26,7 @@ export function PrivacyPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-[17px] text-gray-600 leading-relaxed"
+            className="text-[15px] sm:text-[16px] md:text-[17px] text-gray-600 leading-relaxed"
           >
             Dernière mise à jour : 6 novembre 2025
           </motion.p>

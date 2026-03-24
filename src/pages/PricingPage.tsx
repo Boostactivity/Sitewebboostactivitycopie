@@ -43,7 +43,7 @@ export function PricingPage() {
         schema={combinedSchema}
       />
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center px-5 md:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         <GradientBackground variant="pricing-hero" opacity={0.6} />
         <FloatingShapes />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
@@ -52,7 +52,7 @@ export function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[40px] sm:text-[56px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.05] mb-4 sm:mb-5 md:mb-6">
               <span className="text-black">Tarifs & </span>
               <span className="gradient-text-animated">Offres</span>
             </h1>
@@ -62,7 +62,7 @@ export function PricingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
+            className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto"
           >
             Des solutions flexibles et transparentes, adaptées à chaque étape de votre croissance.
           </motion.p>
@@ -70,7 +70,7 @@ export function PricingPage() {
       </section>
 
       {/* Monthly Plans */}
-      <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="pricing-plans" opacity={0.48} />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <motion.div
@@ -78,18 +78,18 @@ export function PricingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-12 md:mb-16"
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-4 sm:mb-5 md:mb-6">
               <span className="gradient-text-animated">Forfaits</span>
               <span className="text-black"> mensuels</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
               Un accompagnement continu pour une croissance durable
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
             {[
               {
                 icon: Sparkles,
@@ -175,7 +175,7 @@ export function PricingPage() {
                 </div>
                 
                 <Card
-                  className={`p-8 h-full border-2 transition-all duration-500 relative overflow-hidden
+                  className={`p-6 sm:p-7 md:p-8 h-full border-2 transition-all duration-500 relative overflow-hidden
                     ${hoveredPlan === plan.name ? 'scale-105 border-black shadow-2xl' : ''}
                     ${plan.isPopular && !hoveredPlan
                       ? 'border-black bg-white shadow-xl' 
@@ -194,29 +194,29 @@ export function PricingPage() {
                   
                   <div className="relative z-10 h-full flex flex-col">
                     <plan.icon className="w-10 h-10 text-gray-800 mb-6" />
-                    <h3 className="text-[32px] tracking-tight gradient-text-animated mb-2">{plan.name}</h3>
-                    <p className="text-[14px] text-gray-600 mb-6">{plan.description}</p>
-                    
-                    <div className="mb-8">
+                    <h3 className="text-[24px] sm:text-[28px] md:text-[32px] tracking-tight gradient-text-animated mb-2">{plan.name}</h3>
+                    <p className="text-[13px] sm:text-[14px] text-gray-600 mb-4 sm:mb-5 md:mb-6">{plan.description}</p>
+
+                    <div className="mb-6 sm:mb-7 md:mb-8">
                       <div className="flex items-baseline">
-                        <span className="text-[56px] tracking-tight text-black">{plan.price}</span>
-                        {plan.price !== 'Sur devis' && <span className="text-[17px] text-gray-600 ml-1">€</span>}
-                        <span className="text-[14px] text-gray-600 ml-2">{plan.period}</span>
+                        <span className="text-[40px] sm:text-[48px] md:text-[56px] tracking-tight text-black">{plan.price}</span>
+                        {plan.price !== 'Sur devis' && <span className="text-[15px] sm:text-[17px] text-gray-600 ml-1">€</span>}
+                        <span className="text-[13px] sm:text-[14px] text-gray-600 ml-2">{plan.period}</span>
                       </div>
                     </div>
 
-                    <ul className="space-y-4 mb-8 flex-grow">
+                    <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-7 md:mb-8 flex-grow">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start">
                           <Check className="w-5 h-5 text-gray-800 flex-shrink-0 mr-3 mt-0.5" />
-                          <span className="text-[14px] text-gray-700">{feature}</span>
+                          <span className="text-[13px] sm:text-[14px] text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
 
                     <Link to="/contact" className="block mt-auto">
                       <Button
-                        className={`w-full rounded-full py-6 text-[17px] transition-all ease-in-out ${
+                        className={`w-full rounded-full py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] min-h-[52px] transition-all ease-in-out ${
                           hoveredPlan === plan.name
                             ? 'gradient-primary text-white shine-effect duration-150 delay-100'
                             : hoveredPlan && hoveredPlan !== plan.name
@@ -238,7 +238,7 @@ export function PricingPage() {
       </section>
 
       {/* One-time Services */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="pricing-plans" opacity={0.48} />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.div
@@ -246,18 +246,18 @@ export function PricingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-12 md:mb-16"
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-4 sm:mb-5 md:mb-6">
               <span className="text-black">Services </span>
               <span className="gradient-text-animated">à l'unité</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed max-w-[700px] mx-auto">
               Prestations ponctuelles pour des besoins spécifiques
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {[
               {
                 name: 'Branding & Identité',
@@ -310,7 +310,7 @@ export function PricingPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
               >
-                <Card className="p-6 border border-gray-200 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-all duration-500 group relative overflow-hidden h-full">
+                <Card className="p-5 sm:p-6 border border-gray-200 bg-white/80 backdrop-blur-sm hover:shadow-lg transition-all duration-500 group relative overflow-hidden h-full">
                   {/* Effet gradient synchronisé avec le background */}
                   <div className="absolute inset-0 card-hover-pricing-plans opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
@@ -325,7 +325,7 @@ export function PricingPage() {
                       )}
                     </div>
                     
-                    <h3 className="text-[21px] tracking-tight gradient-text-animated mb-2">
+                    <h3 className="text-[18px] sm:text-[20px] md:text-[21px] tracking-tight gradient-text-animated mb-2">
                       {service.name}
                     </h3>
                     
@@ -339,11 +339,11 @@ export function PricingPage() {
                         <span className="text-[10px] text-gray-500 uppercase tracking-wider font-light">À partir de</span>
                       </div>
                       <div className="flex items-baseline mt-1.5 gap-1">
-                        <span className="text-[32px] tracking-tight text-black font-light">{service.priceFrom}</span>
+                        <span className="text-[24px] sm:text-[28px] md:text-[32px] tracking-tight text-black font-light">{service.priceFrom}</span>
                         {service.priceTo && (
                           <>
-                            <span className="text-[16px] text-gray-400 mx-1">—</span>
-                            <span className="text-[32px] tracking-tight text-black font-light">{service.priceTo}</span>
+                            <span className="text-[14px] sm:text-[16px] text-gray-400 mx-1">—</span>
+                            <span className="text-[24px] sm:text-[28px] md:text-[32px] tracking-tight text-black font-light">{service.priceTo}</span>
                           </>
                         )}
                         <span className="text-[16px] text-gray-600 font-light">€</span>
@@ -360,10 +360,10 @@ export function PricingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mt-12"
+            className="text-center mt-8 sm:mt-10 md:mt-12"
           >
             <Link to="/contact">
-              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+              <Button className="w-full sm:w-auto gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
                 Demander un devis personnalisé
               </Button>
             </Link>
@@ -372,7 +372,7 @@ export function PricingPage() {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="pricing-faq" opacity={0.48} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -381,7 +381,7 @@ export function PricingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-7 md:mb-8">
               <span className="text-black">Pourquoi </span>
               <span className="gradient-text-animated">investir</span>
               <span className="text-black"> avec</span>
@@ -390,7 +390,7 @@ export function PricingPage() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 md:gap-8 mt-10 sm:mt-12 md:mt-16">
             {[
               {
                 title: 'ROI mesurable',
@@ -413,8 +413,8 @@ export function PricingPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <h3 className="text-[24px] tracking-tight gradient-text-animated mb-3">{item.title}</h3>
-                <p className="text-[16px] text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-[20px] sm:text-[22px] md:text-[24px] tracking-tight gradient-text-animated mb-2 sm:mb-3">{item.title}</h3>
+                <p className="text-[14px] sm:text-[15px] md:text-[16px] text-gray-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -422,7 +422,7 @@ export function PricingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="pricing-faq" opacity={0.48} />
         <div className="max-w-[900px] mx-auto relative z-10">
           <motion.h2
@@ -430,7 +430,7 @@ export function PricingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Questions </span>
             <span className="gradient-text-animated">fréquentes</span>
@@ -480,13 +480,13 @@ export function PricingPage() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl px-8 py-2 transition-all duration-500 relative overflow-hidden group hover:shadow-lg"
+                  className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl px-5 sm:px-6 md:px-8 py-2 transition-all duration-500 relative overflow-hidden group hover:shadow-lg"
                 >
                   <div className="absolute inset-0 card-hover-pricing-faq pointer-events-none"></div>
-                  <AccordionTrigger className="text-[20px] tracking-tight text-black hover:no-underline relative z-10">
+                  <AccordionTrigger className="text-[16px] sm:text-[18px] md:text-[20px] tracking-tight text-black hover:no-underline relative z-10">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[17px] text-gray-600 leading-relaxed pt-4 relative z-10">
+                  <AccordionContent className="text-[14px] sm:text-[15px] md:text-[17px] text-gray-600 leading-relaxed pt-4 relative z-10">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -497,7 +497,7 @@ export function PricingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="pricing-cta" opacity={0.58} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -506,18 +506,18 @@ export function PricingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-7 md:mb-8">
               <span className="text-black">Besoin d'une </span>
               <span className="gradient-text-animated">offre</span>
               <br />
               <span className="gradient-text-animated">sur-mesure</span>
               <span className="text-black"> ?</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Chaque entreprise est unique. Parlons de vos besoins spécifiques et créons l'offre parfaite pour vous.
             </p>
             <Link to="/contact">
-              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+              <Button className="w-full sm:w-auto gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
                 Discuter de mon projet
               </Button>
             </Link>

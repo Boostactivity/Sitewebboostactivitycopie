@@ -121,7 +121,7 @@ export function ServicesPage() {
                   className={isDropEats ? "md:col-span-2 max-w-[900px] mx-auto w-full" : ""}
                 >
                   <Link to={`/services/${service.slug}`}>
-                    <Card className={`p-10 h-full transition-all duration-500 border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden ${isDropEats ? 'hover:shadow-xl ring-2 ring-orange-200/50' : 'hover:shadow-lg'}`}>
+                    <Card className={`p-6 sm:p-8 md:p-10 h-full transition-all duration-500 border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden ${isDropEats ? 'hover:shadow-xl ring-2 ring-orange-200/50' : 'hover:shadow-lg'}`}>
                       <div className="absolute inset-0 card-hover-services-grid">
                       </div>
                       
@@ -138,11 +138,11 @@ export function ServicesPage() {
                           <service.icon className={`${isDropEats ? 'w-14 h-14' : 'w-12 h-12'} mb-6 text-gray-800`} />
                         </div>
                         
-                        <h3 className={`${isDropEats ? 'text-[36px] text-center' : 'text-[32px]'} tracking-tight mb-4 gradient-text-animated`}>
+                        <h3 className={`${isDropEats ? 'text-[28px] sm:text-[32px] md:text-[36px] text-center' : 'text-[24px] sm:text-[28px] md:text-[32px]'} tracking-tight mb-3 sm:mb-4 gradient-text-animated`}>
                           {service.title}
                         </h3>
                         
-                        <p className={`text-[17px] text-gray-600 leading-relaxed mb-6 ${isDropEats ? 'text-center max-w-[700px] mx-auto' : ''}`}>
+                        <p className={`text-[14px] sm:text-[15px] md:text-[17px] text-gray-600 leading-relaxed mb-4 sm:mb-5 md:mb-6 ${isDropEats ? 'text-center max-w-[700px] mx-auto' : ''}`}>
                           {service.description}
                         </p>
                         

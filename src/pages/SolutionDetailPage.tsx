@@ -416,13 +416,13 @@ export function SolutionDetailPage() {
             className="mb-8"
           >
             <IconComponent className="w-16 h-16 text-gray-800 mb-6" />
-            <h1 className="text-[56px] md:text-[80px] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] tracking-tight leading-[1.05] mb-4 sm:mb-5 md:mb-6">
               <span className="gradient-text-animated">{solution.title}</span>
             </h1>
-            <p className="text-[28px] text-gray-600 leading-relaxed mb-8">
+            <p className="text-[20px] sm:text-[24px] md:text-[28px] text-gray-600 leading-relaxed mb-5 sm:mb-6 md:mb-8">
               {solution.subtitle}
             </p>
-            <p className="text-[17px] text-gray-700 leading-relaxed max-w-[800px]">
+            <p className="text-[15px] sm:text-[16px] md:text-[17px] text-gray-700 leading-relaxed max-w-[800px]">
               {solution.description}
             </p>
           </motion.div>
@@ -451,13 +451,13 @@ export function SolutionDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Défis </span>
             <span className="gradient-text-animated">courants</span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {solution.challenges.map((challenge: any, index: number) => (
               <motion.div
                 key={challenge.title}
@@ -466,14 +466,14 @@ export function SolutionDetailPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="p-8 border-gray-200 bg-white/80 backdrop-blur-sm h-full group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
+                <Card className="p-5 sm:p-6 md:p-8 border-gray-200 bg-white/80 backdrop-blur-sm h-full group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
                   <div className="absolute inset-0 card-hover-solutions-grid">
                   </div>
                   <div className="relative z-10">
-                    <h3 className="text-[24px] tracking-tight gradient-text-animated mb-3">
+                    <h3 className="text-[20px] sm:text-[22px] md:text-[24px] tracking-tight gradient-text-animated mb-2 sm:mb-3">
                       {challenge.title}
                     </h3>
-                    <p className="text-[16px] text-gray-600 leading-relaxed">
+                    <p className="text-[14px] sm:text-[15px] md:text-[16px] text-gray-600 leading-relaxed">
                       {challenge.description}
                     </p>
                   </div>
@@ -493,7 +493,7 @@ export function SolutionDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Nos </span>
             <span className="gradient-text-animated">solutions</span>
@@ -508,20 +508,20 @@ export function SolutionDetailPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="p-8 border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
+                <Card className="p-5 sm:p-6 md:p-8 border-gray-200 bg-white/80 backdrop-blur-sm group relative overflow-hidden transition-all duration-500 hover:shadow-lg">
                   <div className="absolute inset-0 card-hover-solutions-features">
                   </div>
-                  <div className="flex items-center relative z-10">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[var(--solutions-cyan)]/20 bg-gradient-to-br from-[var(--solutions-cyan-light)]/40 to-[var(--solutions-violet-light)]/40 backdrop-blur-sm flex items-center justify-center mr-6">
-                      <span className="text-[16px] tracking-tight gradient-text-animated">
+                  <div className="flex items-start sm:items-center relative z-10">
+                    <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[var(--solutions-cyan)]/20 bg-gradient-to-br from-[var(--solutions-cyan-light)]/40 to-[var(--solutions-violet-light)]/40 backdrop-blur-sm flex items-center justify-center mr-4 sm:mr-5 md:mr-6">
+                      <span className="text-[14px] sm:text-[16px] tracking-tight gradient-text-animated">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-[24px] tracking-tight text-black mb-3">
+                      <h3 className="text-[18px] sm:text-[21px] md:text-[24px] tracking-tight text-black mb-2 sm:mb-3">
                         {sol.title}
                       </h3>
-                      <p className="text-[16px] text-gray-600 leading-relaxed">
+                      <p className="text-[14px] sm:text-[15px] md:text-[16px] text-gray-600 leading-relaxed">
                         {sol.description}
                       </p>
                     </div>
@@ -542,7 +542,7 @@ export function SolutionDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Résultats </span>
             <span className="gradient-text-animated">attendus</span>
@@ -565,7 +565,7 @@ export function SolutionDetailPage() {
                 className="flex items-start space-x-4"
               >
                 <CheckCircle2 className="w-6 h-6 text-gray-800 flex-shrink-0 mt-1" />
-                <p className="text-[17px] text-gray-700 leading-relaxed">{result}</p>
+                <p className="text-[15px] sm:text-[16px] md:text-[17px] text-gray-700 leading-relaxed">{result}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -583,15 +583,15 @@ export function SolutionDetailPage() {
             transition={{ duration: 0.8 }}
           >
             <TrendingUp className="w-12 h-12 text-gray-800 mx-auto mb-6" />
-            <h2 className="text-[48px] md:text-[56px] tracking-tight leading-tight mb-6">
+            <h2 className="text-[36px] sm:text-[44px] md:text-[48px] lg:text-[56px] tracking-tight leading-tight mb-4 sm:mb-5 md:mb-6">
               <span className="text-black">Cas client : </span>
               <span className="gradient-text-animated">{solution.caseStudy.title}</span>
             </h2>
-            <p className="text-[28px] text-gray-700 mb-12">
+            <p className="text-[20px] sm:text-[24px] md:text-[28px] text-gray-700 mb-8 sm:mb-10 md:mb-12">
               {solution.caseStudy.result}
             </p>
             <Link to={solution.caseStudy.link}>
-              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+              <Button className="w-full sm:w-auto gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
                 Lire l'étude de cas complète
               </Button>
             </Link>
@@ -609,7 +609,7 @@ export function SolutionDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-7 md:mb-8">
               <span className="gradient-text-animated">Prêt</span>
               <span className="text-black"> à transformer</span>
               <br />
@@ -617,11 +617,11 @@ export function SolutionDetailPage() {
               <span className="gradient-text-animated">activité</span>
               <span className="text-black"> ?</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Discutons de vos défis spécifiques et créons ensemble la solution parfaite pour votre secteur.
             </p>
             <Link to="/contact">
-              <Button className="gradient-primary text-white hover:opacity-90 rounded-full px-8 py-6 text-[17px] transition-opacity shine-effect">
+              <Button className="w-full sm:w-auto gradient-primary text-white hover:opacity-90 rounded-full px-7 sm:px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] md:text-[17px] transition-opacity shine-effect min-h-[52px]">
                 Parler à un expert de votre secteur
               </Button>
             </Link>

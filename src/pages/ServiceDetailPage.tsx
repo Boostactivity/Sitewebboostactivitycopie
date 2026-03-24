@@ -929,7 +929,7 @@ export function ServiceDetailPage() {
 
       {/* Stats Section - Drop Eats only */}
       {slug === 'drop-eats' && serviceData.stats && (
-        <section className="py-20 px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-services-features pointer-events-none" />
           <div className="max-w-[1400px] mx-auto relative z-10">
             <motion.h2
@@ -937,13 +937,13 @@ export function ServiceDetailPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+              className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
             >
               <span className="text-black">Drop Eats en </span>
               <span className="gradient-text-animated">chiffres</span>
             </motion.h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
               {serviceData.stats.map((stat: any, index: number) => (
                 <motion.div
                   key={stat.label}
@@ -953,7 +953,7 @@ export function ServiceDetailPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-[40px] md:text-[48px] tracking-tight gradient-text-animated mb-2 leading-none">
+                  <div className="text-[28px] sm:text-[36px] md:text-[48px] tracking-tight gradient-text-animated mb-2 leading-none">
                     {stat.value}
                   </div>
                   <div className="text-[15px] text-gray-600">
@@ -968,7 +968,7 @@ export function ServiceDetailPage() {
 
       {/* Problems Section - Drop Eats only */}
       {slug === 'drop-eats' && serviceData.problems && (
-        <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-services-grid pointer-events-none" />
           <div className="max-w-[1000px] mx-auto relative z-10">
             <motion.h2
@@ -976,7 +976,7 @@ export function ServiceDetailPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+              className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
             >
               <span className="text-black">Les </span>
               <span className="gradient-text-animated">défis</span>
@@ -1009,7 +1009,7 @@ export function ServiceDetailPage() {
 
       {/* Model Section - Drop Eats only */}
       {slug === 'drop-eats' && serviceData.model && (
-        <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-services-features pointer-events-none" />
           <div className="max-w-[1200px] mx-auto relative z-10">
             <motion.h2
@@ -1017,7 +1017,7 @@ export function ServiceDetailPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+              className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
             >
               <span className="text-black">Le modèle </span>
               <span className="gradient-text-animated">gagnant-gagnant</span>
@@ -1107,7 +1107,7 @@ export function ServiceDetailPage() {
 
       {/* Comparison Table - Drop Eats only */}
       {slug === 'drop-eats' && serviceData.comparison && (
-        <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-services-grid pointer-events-none" />
           <div className="max-w-[1400px] mx-auto relative z-10">
             <motion.h2
@@ -1115,7 +1115,7 @@ export function ServiceDetailPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+              className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
             >
               <span className="text-black">L'impact </span>
               <span className="gradient-text-animated">Drop Eats</span>
@@ -1195,7 +1195,7 @@ export function ServiceDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Notre </span>
             <span className="gradient-text-animated">processus</span>
@@ -1318,7 +1318,7 @@ export function ServiceDetailPage() {
 
       {/* Case Studies Section - Drop Eats only */}
       {slug === 'drop-eats' && serviceData.cases && (
-        <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-services-grid pointer-events-none" />
           <div className="max-w-[1200px] mx-auto relative z-10">
             <motion.h2
@@ -1326,7 +1326,7 @@ export function ServiceDetailPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+              className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
             >
               <span className="text-black">Cas </span>
               <span className="gradient-text-animated">clients</span>
@@ -1363,7 +1363,7 @@ export function ServiceDetailPage() {
       )}
 
       {/* Deliverables Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-services-grid pointer-events-none" />
         <div className="max-w-[1000px] mx-auto relative z-10">
           <motion.h2
@@ -1371,7 +1371,7 @@ export function ServiceDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Ce que vous </span>
             <span className="gradient-text-animated">recevez</span>
@@ -1398,7 +1398,7 @@ export function ServiceDetailPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-services-features pointer-events-none" />
         <div className="max-w-[900px] mx-auto relative z-10">
           <motion.h2
@@ -1406,7 +1406,7 @@ export function ServiceDetailPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
           >
             <span className="text-black">Questions </span>
             <span className="gradient-text-animated">fréquentes</span>
@@ -1440,7 +1440,7 @@ export function ServiceDetailPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="services" opacity={0.65} />
         <div className="max-w-[1000px] mx-auto text-center relative z-10">
           <motion.div
@@ -1449,11 +1449,11 @@ export function ServiceDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-[48px] md:text-[64px] tracking-tight leading-tight mb-8">
+            <h2 className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-7 md:mb-8">
               <span className="gradient-text-animated">{slug === 'drop-eats' ? 'Découvrez' : 'Prêt'}</span>
               <span className="text-black"> {slug === 'drop-eats' ? 'votre potentiel' : 'à démarrer ?'}</span>
             </h2>
-            <p className="text-[21px] text-gray-600 leading-relaxed mb-12 max-w-[600px] mx-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               {slug === 'drop-eats' 
                 ? 'Obtenez un audit gratuit et une simulation de revenus pour votre restaurant.'
                 : 'Parlons de votre projet et découvrez comment ce service peut transformer votre activité.'}

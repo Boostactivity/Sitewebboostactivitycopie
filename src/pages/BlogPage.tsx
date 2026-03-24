@@ -37,27 +37,27 @@ export function BlogPage() {
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
+        <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
           <FloatingShapes />
-          
+
           {/* Gradient Background */}
           <div className="absolute inset-0 bg-resources-hero opacity-0 group-hover:opacity-0.55 transition-opacity duration-700" />
 
-          <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl">
-              <Badge className="mb-6 bg-resources-amber text-gray-900">
+              <Badge className="mb-4 sm:mb-5 md:mb-6 bg-resources-amber text-gray-900">
                 <TrendingUp className="w-3 h-3 mr-1" />
                 Blog
               </Badge>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl mb-8">
+              <h1 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-tight mb-5 sm:mb-6 md:mb-8">
                 Actualités &{' '}
                 <span className="bg-gradient-to-r from-resources-amber to-services-sky bg-clip-text text-transparent">
                   Conseils
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 mb-12">
+              <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 mb-8 sm:mb-10 md:mb-12">
                 Découvrez nos articles sur le marketing digital, le SEO, les réseaux sociaux et toutes les tendances pour booster votre visibilité en ligne.
               </p>
 
@@ -78,8 +78,8 @@ export function BlogPage() {
         </section>
 
         {/* Categories Filter */}
-        <section className="py-12 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-6">
+        <section className="py-8 sm:py-10 md:py-12 border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => setSelectedCategory('all')}
@@ -110,14 +110,14 @@ export function BlogPage() {
 
         {/* Featured Posts */}
         {selectedCategory === 'all' && searchQuery === '' && featuredPosts.length > 0 && (
-          <section className="py-16 bg-gradient-to-b from-resources-amber/5 to-transparent">
-            <div className="max-w-7xl mx-auto px-6">
+          <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-resources-amber/5 to-transparent">
+            <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
               <div className="flex items-center gap-3 mb-8">
                 <TrendingUp className="w-6 h-6 text-resources-amber" />
                 <h2 className="text-3xl">Articles en vedette</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                 {featuredPosts.slice(0, 2).map((post) => (
                   <Link
                     key={post.id}
@@ -138,7 +138,7 @@ export function BlogPage() {
                         </div>
                       </div>
 
-                      <div className="p-8">
+                      <div className="p-5 sm:p-6 md:p-8">
                         <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
@@ -195,8 +195,8 @@ export function BlogPage() {
         )}
 
         {/* All Posts Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-6">
+        <section className="py-12 sm:py-14 md:py-16">
+          <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
             {filteredPosts.length === 0 ? (
               <div className="text-center py-16">
                 <p className="text-xl text-gray-600">
@@ -225,7 +225,7 @@ export function BlogPage() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                   {filteredPosts.map((post) => (
                     <Link
                       key={post.id}
@@ -296,12 +296,12 @@ export function BlogPage() {
         </section>
 
         {/* Newsletter CTA */}
-        <section className="py-24 bg-gradient-to-br from-resources-amber/10 to-services-sky/10">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-4xl mb-6">
+        <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-resources-amber/10 to-services-sky/10">
+          <div className="max-w-4xl mx-auto px-5 md:px-6 lg:px-8 text-center">
+            <h2 className="text-[28px] sm:text-[36px] md:text-[40px] leading-tight mb-4 sm:mb-5 md:mb-6">
               Recevez nos meilleurs conseils par email
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 mb-6 sm:mb-7 md:mb-8">
               Abonnez-vous à notre newsletter pour recevoir nos articles, guides et études de cas directement dans votre boîte mail.
             </p>
 
