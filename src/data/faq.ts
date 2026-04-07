@@ -112,9 +112,9 @@ Combiner les deux pour maximiser votre visibilité ! Le SEO pour le long terme, 
 - Publicité sociale : 15-20% du budget pub
 
 **Packages All-Inclusive :**
-- **Starter** : 1500€/mois (SEO + Google Ads + Social Media basique)
-- **Growth** : 3000€/mois (SEO avancé + Google Ads + Social Media complet)
-- **Premium** : 5000€+/mois (Stratégie complète sur-mesure)
+- **Starter** : 490€/mois (Site web, SEO on-page, Google My Business, réseaux sociaux)
+- **Growth** : 990€/mois (SEO avancé, campagnes publicitaires, email marketing, CRM)
+- **Performance** : 1990€/mois (Stratégie complète sur-mesure, équipe dédiée, support 24/7)
 
 **Garanties :**
 - Sans engagement (préavis 1 mois)

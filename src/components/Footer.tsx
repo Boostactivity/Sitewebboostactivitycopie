@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Instagram, Mail, Facebook, Cookie } from 'lucide-react';
+import { Linkedin, Instagram, Mail, Facebook, Cookie, Award } from 'lucide-react';
 import { XLogo } from './icons/XLogo';
 import { TikTokLogo } from './icons/TikTokLogo';
 import { resetCookieConsent } from './CookieConsent';
@@ -30,9 +30,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12">
           <div>
             <h3 className="text-[18px] sm:text-[20px] tracking-tight text-black mb-4 sm:mb-5 md:mb-6">Boost Activity</h3>
-            <p className="text-[13px] sm:text-[14px] text-gray-600 leading-relaxed mb-5 sm:mb-6">
+            <p className="text-[13px] sm:text-[14px] text-gray-600 leading-relaxed mb-4">
               Votre partenaire pour une croissance digitale maîtrisée et durable.
             </p>
+            <div className="flex items-center gap-2 mb-5 sm:mb-6">
+              <Award size={16} className="text-gray-800" />
+              <span className="text-[12px] sm:text-[13px] text-gray-700 font-medium">Certifié Google Partner</span>
+            </div>
             <div className="flex items-center gap-1.5 -ml-1.5">
               <a 
                 href="https://www.linkedin.com/company/boost-activity/" 

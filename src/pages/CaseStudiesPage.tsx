@@ -18,7 +18,7 @@ export function CaseStudiesPage() {
   const faq = faqSchema([
     {
       question: 'Quels résultats avez-vous obtenus pour vos clients ?',
-      answer: 'Nos clients ont obtenu une croissance moyenne de +280%, avec des résultats concrets : +180% de réservations pour La Belle Table, 68K€ de CA en 4 mois pour Élégance Fashion, et 520K€ de pipeline pour Stratégie Plus.',
+      answer: 'Nos clients obtiennent des résultats concrets et mesurables : +47% de réservations pour Brasserie du Marché, un taux de conversion multiplié par 4 pour Maison Elara, 15 demandes de devis/mois pour Atelier Renov\', et +2 100€ nets/mois pour DropEats x Le Petit Jardin.',
     },
     {
       question: 'Combien de temps faut-il pour voir des résultats ?',
@@ -33,75 +33,75 @@ export function CaseStudiesPage() {
 
   const caseStudies = [
     {
-      slug: 'la-belle-table',
-      title: 'La Belle Table',
+      slug: 'brasserie-du-marche',
+      title: 'Brasserie du Marché',
       category: 'Restaurant',
-      description: 'Comment ce restaurant gastronomique a multiplié ses réservations par 2.8 en 6 mois.',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      description: '+47% de réservations en 3 mois pour ce restaurant de Versailles grâce à Google Ads local et une fiche Google optimisée.',
+      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
       results: [
-        { label: 'Réservations', value: '+180%' },
-        { label: 'Avis Google', value: '4.8/5' },
-        { label: 'ROI', value: '420%' },
+        { label: 'Réservations', value: '+47%' },
+        { label: 'Coût/réservation', value: '3.20€' },
+        { label: 'Durée', value: '3 mois' },
       ],
     },
     {
-      slug: 'elegance-fashion',
-      title: 'Élégance Fashion',
-      category: 'E-commerce',
-      description: 'Une boutique en ligne qui a généré 68K€ de CA en 4 mois avec nos stratégies SEO et publicités.',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
+      slug: 'maison-elara',
+      title: 'Maison Elara',
+      category: 'E-commerce Cosmétiques',
+      description: 'Taux de conversion passé de 0.8% à 3.2% et CA multiplié par 2.5 en 4 mois pour cette marque de cosmétiques naturels.',
+      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
       results: [
-        { label: 'Chiffre d\'affaires', value: '68K€' },
-        { label: 'Taux de conversion', value: '+156%' },
-        { label: 'Panier moyen', value: '+42%' },
+        { label: 'Conversion', value: '3.2%' },
+        { label: 'CA', value: 'x2.5' },
+        { label: 'Durée', value: '4 mois' },
       ],
     },
     {
-      slug: 'energym',
-      title: 'EnerGym',
-      category: 'Fitness',
-      description: 'Cette salle de sport a attiré 340 nouveaux membres en 5 mois grâce au marketing digital.',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop',
+      slug: 'atelier-renov',
+      title: 'Atelier Renov\'',
+      category: 'Rénovation / BTP',
+      description: '15 demandes de devis par mois via le digital contre 2 avant, avec un ROI de 4.8x sur les publicités.',
+      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop',
       results: [
-        { label: 'Nouveaux membres', value: '340' },
-        { label: 'Coût acquisition', value: '-63%' },
-        { label: 'Rétention', value: '89%' },
+        { label: 'Devis/mois', value: '15' },
+        { label: 'ROI Ads', value: '4.8x' },
+        { label: 'Avant', value: '2 devis' },
       ],
     },
     {
-      slug: 'strategie-plus',
-      title: 'Stratégie Plus',
-      category: 'Conseil B2B',
-      description: 'Un cabinet de conseil qui a généré 520K€ de pipeline commercial avec l\'inbound marketing.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+      slug: 'sophie-martin-coaching',
+      title: 'Sophie Martin Coaching',
+      category: 'Coaching',
+      description: '8 clients par mois via les ads avec un coût d\'acquisition de 45€ pour une valeur client de 800€.',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop',
       results: [
-        { label: 'Pipeline généré', value: '520K€' },
-        { label: 'Leads qualifiés', value: '+385%' },
-        { label: 'Taux closing', value: '34%' },
+        { label: 'Clients/mois', value: '8' },
+        { label: 'Coût acquisition', value: '45€' },
+        { label: 'Valeur client', value: '800€' },
       ],
     },
     {
-      slug: 'premium-immobilier',
-      title: 'Premium Immobilier',
-      category: 'Immobilier',
-      description: 'Une agence immobilière qui a vendu 12 biens de luxe en 8 mois grâce aux publicités ciblées.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+      slug: 'comptoir-des-epices',
+      title: 'Comptoir des Épices',
+      category: 'Épicerie fine',
+      description: '35% du CA généré en ligne après 6 mois pour cette épicerie fine qui n\'avait aucune présence digitale.',
+      image: 'https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=800&h=600&fit=crop',
       results: [
-        { label: 'Biens vendus', value: '12' },
-        { label: 'Délai de vente', value: '-45%' },
-        { label: 'Prix moyen', value: '780K€' },
+        { label: 'CA en ligne', value: '35%' },
+        { label: 'Abonnés Instagram', value: '1 200' },
+        { label: 'Durée', value: '6 mois' },
       ],
     },
     {
-      slug: 'clinique-sourire',
-      title: 'Clinique Sourire',
-      category: 'Santé',
-      description: 'Un cabinet dentaire qui a doublé sa patientèle en 10 mois avec une stratégie locale efficace.',
-      image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop',
+      slug: 'dropeats-le-petit-jardin',
+      title: 'DropEats x Le Petit Jardin',
+      category: 'DropEats',
+      description: '+2 100€ nets/mois de revenus additionnels grâce à 2 marques virtuelles sur Uber Eats et Deliveroo, sans employé supplémentaire.',
+      image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&h=600&fit=crop',
       results: [
-        { label: 'Nouveaux patients', value: '+210%' },
-        { label: 'Taux de remplissage', value: '95%' },
-        { label: 'Satisfaction', value: '4.9/5' },
+        { label: 'Revenus nets', value: '+2 100€/mois' },
+        { label: 'Marques créées', value: '2' },
+        { label: 'Employés ajoutés', value: '0' },
       ],
     },
   ];
@@ -110,8 +110,8 @@ export function CaseStudiesPage() {
     <div className="bg-white">
       <SEO
         title="Études de Cas Marketing Digital - Résultats Clients | Boost Activity"
-        description="Découvrez nos résultats : +180% réservations, 68K€ CA, 520K€ pipeline. Cas clients restaurant, e-commerce, fitness, immobilier."
-        keywords="études de cas marketing digital, success stories, résultats clients, croissance restaurant, e-commerce, fitness, immobilier"
+        description="Découvrez nos résultats : +47% réservations restaurant, conversion x4 e-commerce, 15 devis/mois BTP, +2100€/mois DropEats. Cas clients réels."
+        keywords="études de cas marketing digital, success stories, résultats clients, croissance restaurant, e-commerce, coaching, rénovation, DropEats"
         ogImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
         canonical="https://boostactivity.fr/case-studies"
         schema={combinedSchema}

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, Target, Zap, Award, BarChart, Star, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Target, Zap, Award, BarChart, Star, CheckCircle2, Shield, FileText, Calendar } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
@@ -20,50 +20,50 @@ const stats = [
 
 const services = [
   {
-    slug: 'strategie-digitale',
-    icon: Target,
-    title: 'Stratégie Digitale',
-    description: 'Définissez une vision claire et des objectifs mesurables pour votre croissance en ligne.',
+    slug: 'marketing-acquisition',
+    icon: Zap,
+    title: 'Attirez des clients qualifiés chaque jour',
+    description: 'Google Ads, Meta Ads, campagnes ciblées : on met en place la publicité digitale qui ramène des clients concrets, pas juste des clics.',
   },
   {
-    slug: 'seo-sea',
-    icon: TrendingUp,
-    title: 'SEO & SEA',
-    description: 'Dominez les résultats de recherche et attirez un trafic qualifié sur votre site.',
+    slug: 'creation-web',
+    icon: Target,
+    title: 'Un site qui transforme vos visiteurs en clients',
+    description: 'Sites vitrines, e-commerce, landing pages : des sites rapides, optimisés et pensés pour convertir vos visiteurs en demandes de devis ou en ventes.',
   },
   {
     slug: 'social-media',
     icon: Users,
-    title: 'Social Media',
-    description: 'Créez une communauté engagée et transformez vos followers en clients fidèles.',
+    title: 'Construisez une communauté qui achète',
+    description: 'Gestion Instagram, Facebook, LinkedIn, TikTok : on crée du contenu qui engage votre audience et génère des ventes.',
   },
   {
-    slug: 'marketing-acquisition',
-    icon: Zap,
-    title: 'Marketing d\'Acquisition',
-    description: 'Attirez, convertissez et fidélisez vos clients avec des campagnes performantes.',
+    slug: 'seo-sea',
+    icon: TrendingUp,
+    title: 'Soyez trouvé en premier sur Google',
+    description: 'SEO technique, contenu optimisé, fiche Google Business : on vous positionne là où vos clients vous cherchent.',
+  },
+  {
+    slug: 'strategie-digitale',
+    icon: BarChart,
+    title: 'Performance & Analytics',
+    description: 'Rapports hebdomadaires, KPIs clairs, optimisation continue : chaque euro investi est suivi et optimisé.',
   },
   {
     slug: 'audience-engagement',
-    icon: Users,
-    title: 'Audience & Engagement',
-    description: 'Développez votre communauté et maximisez l\'engagement de votre audience.',
-  },
-  {
-    slug: 'performance-analytics',
-    icon: BarChart,
-    title: 'Performance & Analytics',
-    description: 'Mesurez, analysez et optimisez vos résultats en temps réel.',
+    icon: Award,
+    title: 'Branding & Identité',
+    description: 'Logo, charte graphique, identité de marque : on construit une image professionnelle qui inspire confiance.',
   },
 ];
 
 const industries = [
-  { name: 'E-commerce', growth: '+300%' },
-  { name: 'Restauration', growth: '+240%' },
-  { name: 'Fitness', growth: '+320%' },
-  { name: 'Immobilier', growth: '47 leads' },
-  { name: 'Services B2B', growth: '120k€' },
-  { name: 'Santé', growth: '+185%' },
+  { name: 'E-commerce', growth: 'x2.5 CA' },
+  { name: 'Restauration', growth: '+47%' },
+  { name: 'Rénovation / BTP', growth: '15 devis/mois' },
+  { name: 'Coaching', growth: '8 clients/mois' },
+  { name: 'Commerce local', growth: '35% CA en ligne' },
+  { name: 'DropEats', growth: '+2 100€/mois' },
 ];
 
 const process = [
@@ -158,10 +158,11 @@ export function HomePage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="text-[36px] sm:text-[52px] md:text-[80px] lg:text-[96px] tracking-tight leading-[1.15] sm:leading-[1.1] md:leading-[1.05] mb-5 md:mb-6 px-2 sm:px-0">
-              <span className="text-black">Votre </span>
-              <span className="gradient-text-animated">croissance</span>
+              <span className="text-black">On transforme votre</span>
               <br />
-              <span className="text-black">commence ici</span>
+              <span className="gradient-text-animated">digital</span>
+              <span className="text-black"> en </span>
+              <span className="gradient-text-animated">machine à clients</span>
             </h1>
           </motion.div>
 
@@ -171,7 +172,7 @@ export function HomePage() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-[1.5] sm:leading-[1.6] md:leading-relaxed mb-10 md:mb-12 max-w-[650px] mx-auto px-2"
           >
-            Boost Activity accompagne les entrepreneurs et entreprises ambitieuses vers une croissance digitale maîtrisée, durable et impactante.
+            Publicité, sites web et réseaux sociaux pour les PME et entrepreneurs en Île-de-France. Des résultats mesurables, pas des promesses.
           </motion.p>
 
           <motion.div
@@ -190,7 +191,7 @@ export function HomePage() {
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
               <Link to="/case-studies" className="block">
                 <Button variant="outline" className="w-full sm:w-auto rounded-full px-7 sm:px-8 py-6 text-[16px] sm:text-[17px] border-2 border-gray-300 hover:border-primary transition-colors min-h-[52px]">
-                  Voir nos réalisations
+                  Voir nos résultats
                 </Button>
               </Link>
             </motion.div>
@@ -622,6 +623,119 @@ export function HomePage() {
           </motion.div>
 
           {/* Navigation removed - only 3 testimonials displayed */}
+        </div>
+      </section>
+
+      {/* Audit Gratuit Section */}
+      <section className="py-16 sm:py-20 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden" style={{ backgroundColor: '#F8FAFC' }}>
+        <div className="max-w-[600px] mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="text-center mb-8 sm:mb-10">
+              <h2 className="text-[28px] sm:text-[36px] md:text-[48px] tracking-tight leading-[1.2] sm:leading-tight mb-4 sm:mb-5">
+                <span className="gradient-text-animated">Recevez votre audit digital</span>
+                <br />
+                <span className="text-black">gratuit en 24h</span>
+              </h2>
+              <p className="text-[15px] sm:text-[17px] md:text-[18px] text-gray-600 leading-[1.6]">
+                On analyse votre présence en ligne et on vous dit exactement quoi améliorer. Sans engagement.
+              </p>
+            </div>
+
+            <Card className="p-6 sm:p-8 border-gray-200 bg-white shadow-lg">
+              <form action="https://formspree.io/f/xeepdoly" method="POST" className="space-y-4">
+                <div>
+                  <label htmlFor="audit-email" className="block text-[14px] text-gray-700 mb-1.5">Email</label>
+                  <input
+                    type="email"
+                    id="audit-email"
+                    name="email"
+                    required
+                    placeholder="votre@email.com"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all text-[15px]"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="audit-company" className="block text-[14px] text-gray-700 mb-1.5">Nom de l'entreprise</label>
+                  <input
+                    type="text"
+                    id="audit-company"
+                    name="company"
+                    required
+                    placeholder="Votre entreprise"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all text-[15px]"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="audit-url" className="block text-[14px] text-gray-700 mb-1.5">URL du site (optionnel)</label>
+                  <input
+                    type="url"
+                    id="audit-url"
+                    name="website"
+                    placeholder="https://votre-site.fr"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all text-[15px]"
+                  />
+                </div>
+                <input type="hidden" name="_subject" value="Demande d'audit digital gratuit" />
+                <Button type="submit" className="w-full gradient-primary text-white hover:opacity-90 rounded-full py-5 sm:py-6 text-[16px] sm:text-[17px] transition-opacity shine-effect min-h-[52px] shadow-lg shadow-primary/20">
+                  Recevoir mon audit gratuit
+                </Button>
+              </form>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Garantie Section */}
+      <section className="py-14 sm:py-16 md:py-20 px-5 md:px-6 lg:px-8 bg-white">
+        <div className="max-w-[1000px] mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 sm:mb-12"
+          >
+            <h2 className="text-[28px] sm:text-[36px] md:text-[48px] tracking-tight leading-[1.2] sm:leading-tight mb-4">
+              <span className="text-black">Notre </span>
+              <span className="gradient-text-animated">garantie</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                icon: Shield,
+                title: 'Satisfait ou remboursé pendant 30 jours',
+              },
+              {
+                icon: FileText,
+                title: 'Rapports transparents chaque semaine',
+              },
+              {
+                icon: Calendar,
+                title: 'Pas d\'engagement au-delà de 3 mois',
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-transparent flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-6 h-6 text-gray-800" />
+                </div>
+                <p className="text-[15px] sm:text-[16px] md:text-[17px] text-gray-700 leading-[1.5]">{item.title}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

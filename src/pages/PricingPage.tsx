@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Check, ArrowRight, Zap, Sparkles, Palette, Target, ShoppingCart, Globe, TrendingUp, RefreshCw } from 'lucide-react';
+import { Check, ArrowRight, Zap, Sparkles, Palette, Target, ShoppingCart, Globe, TrendingUp, RefreshCw, Shield } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
@@ -66,6 +66,21 @@ export function PricingPage() {
           >
             Des solutions flexibles et transparentes, adaptées à chaque étape de votre croissance.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Guarantee Banner */}
+      <section className="py-4 px-5 md:px-6 lg:px-8">
+        <div className="max-w-[600px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex items-center justify-center gap-3 py-3 px-6 rounded-full border border-gray-200 bg-white shadow-sm"
+          >
+            <Shield className="w-5 h-5 text-green-600 flex-shrink-0" />
+            <span className="text-[14px] sm:text-[15px] text-gray-700">Garantie 30 jours satisfait ou remboursé</span>
+          </motion.div>
         </div>
       </section>
 
