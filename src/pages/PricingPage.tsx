@@ -394,7 +394,7 @@ export function PricingPage() {
             {[
               {
                 title: 'ROI mesurable',
-                description: 'Chaque euro investi génère en moyenne 3.5€ de retour pour nos clients',
+                description: 'Chaque euro investi génère en moyenne 3x de retour pour nos clients',
               },
               {
                 title: 'Transparence totale',

@@ -19,8 +19,8 @@ export function AboutPage() {
   return (
     <div className="bg-white">
       <SEO
-        title="À Propos - Agence Marketing Digital Premium Paris | Boost Activity"
-        description="Agence marketing digital Paris depuis 2020. Marketing accessible, transparent et performant pour entreprises ambitieuses. +280% croissance."
+        title="À Propos - Agence Marketing Digital Île-de-France | Boost Activity"
+        description="Agence marketing digital fondée en 2022 à Carrières-sur-Seine. Marketing accessible, transparent et performant pour entreprises ambitieuses."
         keywords="agence marketing Paris, à propos Boost Activity, équipe marketing digital, valeurs agence digitale, expertise marketing"
       />
 
@@ -66,10 +66,13 @@ export function AboutPage() {
                 <span className="gradient-text-animated">mission</span>
               </h2>
               <p className="text-[15px] sm:text-[17px] md:text-[21px] text-gray-700 leading-relaxed mb-5 sm:mb-6">
-                Rendre le marketing digital accessible, transparent et performant pour toutes les entreprises ambitieuses.
+                Adel Maghrabi a fondé Boost Activity en 2022 avec une conviction : le marketing digital ne devrait pas être réservé aux grandes entreprises.
+              </p>
+              <p className="text-[15px] sm:text-[17px] md:text-[21px] text-gray-700 leading-relaxed mb-5 sm:mb-6">
+                Ancien cadre dans l'industrie, il a vu trop de PME et d'entrepreneurs passer à côté du digital par manque d'accompagnement adapté.
               </p>
               <p className="text-[15px] sm:text-[17px] md:text-[21px] text-gray-700 leading-relaxed">
-                Nous croyons en un digital qui amplifie votre potentiel, sans jamais perdre de vue l'humain au centre de chaque stratégie.
+                Boost Activity est née pour combler ce fossé — des stratégies concrètes, des résultats mesurables, et un accompagnement humain.
               </p>
             </motion.div>
 
@@ -164,8 +167,8 @@ export function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 md:gap-8">
             {[
               { value: 2022, label: 'Année de création', suffix: '' },
-              { value: 35, label: 'Projets réalisés', suffix: '+' },
-              { value: 2, label: 'Experts passionnés', suffix: '' },
+              { value: 50, label: 'Entreprises accompagnées', suffix: '+' },
+              { value: 3, label: 'ROI moyen', suffix: 'x' },
               { value: 100, label: 'Clients satisfaits', suffix: '%' },
             ].map((stat, index) => (
               <motion.div
@@ -257,58 +260,26 @@ export function AboutPage() {
       {/* Team */}
       <section className="py-16 sm:py-24 md:py-32 px-5 md:px-6 lg:px-8 relative overflow-hidden">
         <GradientBackground variant="about-team" opacity={0.48} />
-        <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="max-w-[900px] mx-auto relative z-10 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-10 sm:mb-12 md:mb-16 text-center"
+            className="text-[36px] sm:text-[48px] md:text-[64px] tracking-tight leading-tight mb-6 sm:mb-8 md:mb-10"
           >
             <span className="gradient-text-animated">L'équipe</span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-[900px] mx-auto">
-            {[
-              {
-                name: 'Sarah Benali',
-                role: 'Graphiste & Designer',
-                bio: 'Spécialiste en identité visuelle et design digital. Crée des univers graphiques impactants pour nos clients.',
-              },
-              {
-                name: 'Thomas Leroy',
-                role: 'Chargé de Marketing Digital',
-                bio: 'Expert en stratégie d\'acquisition et gestion de campagnes. Optimise la performance de chaque euro investi.',
-              },
-            ].map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="overflow-hidden border-gray-200 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-500 group relative active:scale-[0.98]">
-                  <div className="absolute inset-0 card-hover-about-team"></div>
-                  
-                  <div className="relative z-10 p-6 sm:p-7 md:p-8">
-                    {/* Gradient Circle Avatar */}
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full gradient-primary mx-auto mb-5 sm:mb-6 flex items-center justify-center">
-                      <span className="text-white text-[28px] sm:text-[32px] tracking-tight">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-[20px] sm:text-[22px] md:text-[24px] tracking-tight text-black mb-2 text-center">
-                      {member.name}
-                    </h3>
-                    <p className="text-[14px] sm:text-[15px] md:text-[16px] gradient-text-animated mb-3 sm:mb-4 text-center">{member.role}</p>
-                    <p className="text-[13px] sm:text-[14px] text-gray-600 leading-relaxed text-center">{member.bio}</p>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-[15px] sm:text-[17px] md:text-[21px] text-gray-700 leading-relaxed max-w-[700px] mx-auto"
+          >
+            Une équipe de spécialistes du digital — stratégie, design, acquisition, SEO — au service de votre croissance. Chaque projet est porté par des experts dédiés qui comprennent vos enjeux.
+          </motion.p>
         </div>
       </section>
 
@@ -337,7 +308,7 @@ export function AboutPage() {
               {
                 icon: TrendingUp,
                 title: 'Résultats prouvés',
-                description: 'ROI moyen de 3.5x, 100% de clients satisfaits, croissance mesurable.',
+                description: 'ROI moyen de x3, 50+ entreprises accompagnées, croissance mesurable.',
               },
               {
                 icon: Users,

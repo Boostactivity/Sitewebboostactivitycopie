@@ -119,16 +119,11 @@ export function Footer() {
               <p>
                 <strong className="text-black">Boost Activity</strong><br />
                 Agence Marketing Digital<br />
-                Paris, France
+                Carrières-sur-Seine, Île-de-France
               </p>
               <p>
-                <a href="tel:+33660968516" className="hover:text-black transition-colors">
-                  +33 6 60 96 85 16
-                </a>
-              </p>
-              <p>
-                <a href="mailto:boostactivityfr@gmail.com" className="hover:text-black transition-colors">
-                  boostactivityfr@gmail.com
+                <a href="mailto:contact@boostactivity.fr" className="hover:text-black transition-colors">
+                  contact@boostactivity.fr
                 </a>
               </p>
               <p className="text-[12px] text-gray-500">

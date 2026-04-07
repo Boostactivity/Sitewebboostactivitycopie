@@ -208,7 +208,7 @@ export function FAQPage() {
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors inline-flex items-center justify-center"
               >
-                WhatsApp : +33 6 60 96 85 16
+                Discuter sur WhatsApp
               </a>
             </div>
           </div>

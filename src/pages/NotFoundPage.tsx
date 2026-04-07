@@ -134,7 +134,7 @@ export function NotFoundPage() {
                 WhatsApp
               </a>{' '}
               ou par{' '}
-              <a href="mailto:boostactivityfr@gmail.com" className="text-black hover:underline">
+              <a href="mailto:contact@boostactivity.fr" className="text-black hover:underline">
                 email
               </a>
               . Nous vous répondrons rapidement !

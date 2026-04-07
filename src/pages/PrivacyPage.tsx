@@ -64,8 +64,8 @@ export function PrivacyPage() {
               <ul className="space-y-2 text-[16px] mb-4">
                 <li><strong>Société :</strong> Boost Activity SAS</li>
                 <li><strong>Siège social :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
-                <li><strong>Email :</strong> boostactivityfr@gmail.com</li>
-                <li><strong>Téléphone :</strong> +33 6 60 96 85 16</li>
+                <li><strong>Email :</strong> contact@boostactivity.fr</li>
+                <li><strong>WhatsApp :</strong> <a href="https://wa.me/33660968516" className="text-black underline">Nous contacter</a></li>
               </ul>
             </div>
 
@@ -194,7 +194,7 @@ export function PrivacyPage() {
                 Pour exercer vos droits, contactez-nous à :
               </p>
               <ul className="space-y-2 text-[16px] mb-4">
-                <li><strong>Email :</strong> boostactivityfr@gmail.com</li>
+                <li><strong>Email :</strong> contact@boostactivity.fr</li>
                 <li><strong>Courrier :</strong> Boost Activity SAS - Service DPO, 2 Bis Rue Jules César, 78420 Carrières-sur-Seine</li>
               </ul>
               <p className="text-[17px] leading-relaxed">
@@ -249,8 +249,8 @@ export function PrivacyPage() {
                 Pour toute question concernant cette politique de confidentialité ou le traitement de vos données :
               </p>
               <ul className="space-y-2 text-[16px] mb-6">
-                <li><strong>Email :</strong> boostactivityfr@gmail.com</li>
-                <li><strong>Téléphone :</strong> +33 6 60 96 85 16</li>
+                <li><strong>Email :</strong> contact@boostactivity.fr</li>
+                <li><strong>WhatsApp :</strong> <a href="https://wa.me/33660968516" className="text-black underline">Nous contacter</a></li>
                 <li><strong>Adresse :</strong> Boost Activity SAS, 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
               </ul>
               

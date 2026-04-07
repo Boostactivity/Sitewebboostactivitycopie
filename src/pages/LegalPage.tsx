@@ -51,15 +51,14 @@ export function LegalPage() {
               <ul className="space-y-2 text-[16px] mb-4">
                 <li><strong>Société :</strong> Boost Activity SAS</li>
                 <li><strong>Siège social :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
-                <li><strong>Téléphone :</strong> +33 6 60 96 85 16</li>
-                <li><strong>Email :</strong> boostactivityfr@gmail.com</li>
+                <li><strong>Email :</strong> contact@boostactivity.fr</li>
               </ul>
             </div>
 
             <div>
               <h2 className="text-[32px] tracking-tight text-black mb-4">2. Directeur de publication</h2>
               <p className="text-[17px] leading-relaxed">
-                Le directeur de la publication du site est Alexandre Martin, Président de Boost Activity SAS.
+                Le directeur de la publication du site est Adel Maghrabi, Fondateur de Boost Activity.
               </p>
             </div>
 
@@ -98,7 +97,7 @@ export function LegalPage() {
                 <li>Améliorer nos services</li>
               </ul>
               <p className="text-[17px] leading-relaxed">
-                Pour exercer vos droits, contactez-nous à : <a href="mailto:boostactivityfr@gmail.com" className="text-black underline">boostactivityfr@gmail.com</a>
+                Pour exercer vos droits, contactez-nous à : <a href="mailto:contact@boostactivity.fr" className="text-black underline">contact@boostactivity.fr</a>
               </p>
             </div>
 
@@ -144,9 +143,8 @@ export function LegalPage() {
                 Pour toute question concernant ces mentions légales, vous pouvez nous contacter :
               </p>
               <ul className="space-y-2 text-[16px] mt-4">
-                <li><strong>Par email :</strong> <a href="mailto:boostactivityfr@gmail.com" className="text-black underline">boostactivityfr@gmail.com</a></li>
-                <li><strong>Par téléphone :</strong> +33 6 60 96 85 16</li>
-                <li><strong>Par courrier :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
+                <li><strong>Par email :</strong> <a href="mailto:contact@boostactivity.fr" className="text-black underline">contact@boostactivity.fr</a></li>
+                <li><strong>Par courrier :</strong> Carrières-sur-Seine, 78420, Île-de-France, France</li>
               </ul>
             </div>
           </motion.div>

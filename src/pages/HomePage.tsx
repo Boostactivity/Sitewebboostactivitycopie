@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, Target, Zap, Award, BarChart, Star, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Target, Zap, Award, BarChart, Star, CheckCircle2 } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
@@ -13,9 +12,9 @@ import { SEO } from '../components/SEO';
 import { organizationSchema, localBusinessSchema, websiteSchema } from '../utils/seo/schemas';
 
 const stats = [
-  { value: 35, suffix: '+', label: 'Clients accompagnés' },
+  { value: 50, suffix: '+', label: 'Entreprises accompagnées' },
   { value: 100, suffix: '%', label: 'Satisfaction client' },
-  { value: 450, suffix: 'k€', label: 'CA généré' },
+  { value: 3, suffix: 'x', label: 'ROI moyen' },
   { value: 2022, suffix: '', label: 'Année de fondation' },
 ];
 
@@ -94,7 +93,7 @@ const advantages = [
   {
     icon: Target,
     title: 'Expertise prouvée',
-    description: '280% de croissance moyenne pour nos clients et des résultats mesurables dès les premiers mois.',
+    description: 'ROI moyen x3 pour nos clients et des résultats mesurables dès les premiers mois.',
   },
   {
     icon: Award,
@@ -110,74 +109,39 @@ const advantages = [
 
 const testimonials = [
   {
-    author: 'Karim Alami',
-    role: 'Propriétaire, La Belle Table',
-    text: 'Boost Activity a transformé notre restaurant. Nos réservations ont augmenté de 240% en 6 mois et nous sommes maintenant complets presque tous les soirs !',
+    author: 'M. R.',
+    role: 'Gérant d\'un restaurant à Versailles',
+    text: 'Boost Activity a vraiment boosté notre visibilité en ligne. En quelques mois, nos réservations ont nettement augmenté. Un accompagnement sérieux et à l\'écoute.',
     rating: 5,
   },
   {
-    author: 'Laura Chen',
-    role: 'Fondatrice, Élégance Fashion',
-    text: 'Une équipe exceptionnelle qui a transformé ma vision en réalité. Mon e-commerce a généré 150k€ de CA en 4 mois grâce à leur stratégie !',
-    rating: 5,
+    author: 'S. L.',
+    role: 'Fondatrice d\'une boutique e-commerce en Île-de-France',
+    text: 'Je cherchais une agence qui comprenne les contraintes d\'une petite structure. Boost Activity a su adapter sa stratégie à mon budget et les résultats sont là.',
+    rating: 4,
   },
   {
-    author: 'Mohamed Diallo',
-    role: 'Directeur, FitPro Gym',
-    text: 'Des professionnels qui comprennent vraiment les enjeux du fitness. Nos inscriptions ont augmenté de 320% en 3 mois, résultats incroyables !',
-    rating: 5,
-  },
-  {
-    author: 'Sophie Andersen',
-    role: 'Agent Immobilier, Prestige Immo',
-    text: 'Leur stratégie Facebook Ads m\'a permis de générer 47 leads qualifiés en 2 mois. Mon meilleur investissement marketing cette année !',
-    rating: 5,
-  },
-  {
-    author: 'Julien Moreau',
-    role: 'Directeur, Stratégie Plus',
-    text: 'Un partenaire stratégique exceptionnel. Ils nous ont aidés à générer 120k€ de CA grâce au digital en moins de 6 mois.',
-    rating: 5,
-  },
-  {
-    author: 'Dr. Amina Patel',
-    role: 'Chirurgien-Dentiste, Clinique Sourire',
-    text: 'Mes nouveaux patients ont augmenté de 185% depuis que je travaille avec eux. Le système de prise de RDV en ligne fonctionne à merveille !',
+    author: 'T. B.',
+    role: 'Dirigeant d\'une PME dans le bâtiment',
+    text: 'Très bon suivi, des rapports clairs et une vraie progression sur Google. Je recommande pour les entrepreneurs qui veulent se lancer dans le digital.',
     rating: 5,
   },
 ];
 
 export function HomePage() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
   const combinedSchema = {
     '@context': 'https://schema.org',
     '@graph': [organizationSchema, localBusinessSchema, websiteSchema],
   };
 
-  const displayedTestimonials = testimonials.slice(
-    currentTestimonial * 3,
-    currentTestimonial * 3 + 3
-  );
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => 
-      prev === Math.ceil(testimonials.length / 3) - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => 
-      prev === 0 ? Math.ceil(testimonials.length / 3) - 1 : prev - 1
-    );
-  };
+  const displayedTestimonials = testimonials;
 
   return (
     <div className="bg-white">
       <SEO
-        title="Boost Activity - Agence Marketing Digital Premium | Paris"
-        description="Agence de marketing digital haut de gamme à Paris. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. +280% de croissance moyenne pour nos clients."
-        keywords="agence marketing digital Paris, agence SEO Paris, publicité Google Ads, Facebook Ads, Instagram Ads, stratégie digitale, marketing digital premium, agence digitale PME"
+        title="Boost Activity - Agence Marketing Digital | Île-de-France"
+        description="Agence de marketing digital en Île-de-France. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. 50+ entreprises accompagnées, ROI moyen x3."
+        keywords="agence marketing digital, agence SEO Île-de-France, publicité Google Ads, Facebook Ads, Instagram Ads, stratégie digitale, marketing digital PME"
         ogImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
         canonical="https://boostactivity.fr"
         schema={combinedSchema}
@@ -657,42 +621,7 @@ export function HomePage() {
             </Link>
           </motion.div>
 
-          {/* Navigation Arrows - MOBILE OPTIMIZED */}
-          <div className="flex justify-center items-center gap-3 sm:gap-4 mt-10 sm:mt-12">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={prevTestimonial}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg group min-h-[48px]"
-            >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 group-hover:text-white transition-colors" />
-            </motion.button>
-            
-            <div className="flex gap-2">
-              {[...Array(Math.ceil(testimonials.length / 3))].map((_, index) => (
-                <motion.div
-                  key={index}
-                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                    index === currentTestimonial 
-                      ? 'w-8 bg-gradient-to-r from-primary to-[var(--accent-purple)]' 
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  onClick={() => setCurrentTestimonial(index)}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                />
-              ))}
-            </div>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={nextTestimonial}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg group min-h-[48px]"
-            >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 group-hover:text-white transition-colors" />
-            </motion.button>
-          </div>
+          {/* Navigation removed - only 3 testimonials displayed */}
         </div>
       </section>
 

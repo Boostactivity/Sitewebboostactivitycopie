@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Send, Loader2, Calendar } from 'lucide-react';
+import { MapPin, Mail, Send, Loader2, Calendar, MessageCircle } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
@@ -8,7 +8,6 @@ import { Label } from '../components/ui/label';
 import { Button } from '../components/ui/button';
 import { GradientBackground } from '../components/GradientBackground';
 import { FloatingShapes } from '../components/FloatingShapes';
-import { projectId, publicAnonKey } from '../utils/supabase/info';
 import { toast } from 'sonner@2.0.3';
 import { SEO } from '../components/SEO';
 import { breadcrumbSchema } from '../utils/seo/schemas';
@@ -35,38 +34,31 @@ export function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/make-server-bc3c2c3d/contact`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${publicAnonKey}`,
-          },
-          body: JSON.stringify(formData),
-        }
+      const subject = encodeURIComponent(`Nouvelle demande - ${formData.firstName} ${formData.lastName}`);
+      const body = encodeURIComponent(
+        `Nom: ${formData.firstName} ${formData.lastName}\n` +
+        `Email: ${formData.email}\n` +
+        `Téléphone: ${formData.phone || 'Non renseigné'}\n` +
+        `Entreprise: ${formData.company || 'Non renseigné'}\n` +
+        `Budget: ${formData.budget || 'Non renseigné'}\n\n` +
+        `Message:\n${formData.message}`
       );
 
-      const data = await response.json();
+      window.location.href = `mailto:contact@boostactivity.fr?subject=${subject}&body=${body}`;
 
-      if (response.ok && data.success) {
-        toast.success('Merci pour votre message ! Nous vous recontactons sous 24h.');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          company: '',
-          message: '',
-          budget: '',
-        });
-      } else {
-        console.error('Form submission error:', data);
-        toast.error('Une erreur est survenue. Veuillez réessayer.');
-      }
+      toast.success('Votre client mail va s\'ouvrir. Vous pouvez aussi nous écrire directement à contact@boostactivity.fr');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+        budget: '',
+      });
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Impossible d\'envoyer le message. Vérifiez votre connexion.');
+      toast.error('Impossible d\'ouvrir votre client mail. Écrivez-nous à contact@boostactivity.fr');
     } finally {
       setIsSubmitting(false);
     }
@@ -80,20 +72,20 @@ export function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'boostactivityfr@gmail.com',
-      link: 'mailto:boostactivityfr@gmail.com',
+      value: 'contact@boostactivity.fr',
+      link: 'mailto:contact@boostactivity.fr',
     },
     {
-      icon: Phone,
-      title: 'Téléphone',
-      value: '+33 6 60 96 85 16',
-      link: 'tel:+33660968516',
+      icon: MessageCircle,
+      title: 'WhatsApp',
+      value: 'Discuter sur WhatsApp',
+      link: 'https://wa.me/33660968516',
     },
     {
       icon: MapPin,
       title: 'Adresse',
-      value: '2 Bis Rue Jules César, 78420 Carrières-sur-Seine',
-      link: 'https://maps.google.com',
+      value: 'Carrières-sur-Seine, Île-de-France',
+      link: 'https://maps.google.com/?q=Carrières-sur-Seine',
     },
   ];
 
@@ -209,16 +201,28 @@ export function ContactPage() {
                   </ul>
                 </div>
 
-                <div className="pt-4 sm:pt-5 md:pt-6">
+                <div className="pt-4 sm:pt-5 md:pt-6 space-y-3">
                   <h3 className="text-[18px] sm:text-[19px] md:text-[20px] tracking-tight text-black mb-2.5 sm:mb-3">
-                    Besoin d'aide immédiate ?
+                    Autres moyens de contact
                   </h3>
                   <a
-                    href="tel:+33660968516"
-                    className="inline-flex items-center text-[13px] sm:text-[14px] text-black hover:opacity-70 transition-opacity min-h-[52px] py-3"
+                    href="https://wa.me/33660968516"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-[13px] sm:text-[14px] text-black hover:opacity-70 transition-opacity min-h-[44px] py-2"
                   >
-                    <Phone className="w-4 h-4 mr-2" />
-                    +33 6 60 96 85 16
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Discuter sur WhatsApp
+                  </a>
+                  <br />
+                  <a
+                    href="https://calendly.com/boostactivityfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-[13px] sm:text-[14px] text-black hover:opacity-70 transition-opacity min-h-[44px] py-2"
+                  >
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Réserver un créneau Calendly
                   </a>
                 </div>
               </div>
@@ -355,8 +359,8 @@ export function ContactPage() {
             <p className="text-[16px] sm:text-[18px] md:text-[21px] text-gray-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-[600px] mx-auto">
               Réservez un créneau dans notre agenda pour un appel découverte de 30 minutes, sans engagement.
             </p>
-            <a 
-              href="https://wa.me/33660968516?text=Bonjour%20Boost%20Activity%2C%20je%20souhaite%20planifier%20un%20appel%20gratuit%20pour%20discuter%20de%20mon%20projet%20digital."
+            <a
+              href="https://calendly.com/boostactivityfr"
               target="_blank"
               rel="noopener noreferrer"
             >

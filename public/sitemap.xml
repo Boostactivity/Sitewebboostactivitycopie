@@ -162,7 +162,15 @@
   <!-- Legal -->
   <url>
     <loc>https://boostactivity.fr/legal</loc>
-    <lastmod>2024-11-25</lastmod>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Privacy -->
+  <url>
+    <loc>https://boostactivity.fr/privacy</loc>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

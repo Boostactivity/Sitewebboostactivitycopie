@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'Boost Activity - Agence Marketing Digital Premium à Paris | Stratégie & SEO',
-  description = 'Boost Activity, agence de marketing digital haut de gamme à Paris. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. Résultats garantis.',
-  keywords = 'agence marketing digital, marketing digital Paris, SEO, publicité en ligne, social media, stratégie digitale, Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, agence digitale premium',
+  title = 'Boost Activity - Agence Marketing Digital | Stratégie & SEO',
+  description = 'Boost Activity, agence de marketing digital en Île-de-France. SEO, publicité en ligne, social media et stratégie digitale pour PME ambitieuses. Résultats mesurables.',
+  keywords = 'agence marketing digital, marketing digital Île-de-France, SEO, publicité en ligne, social media, stratégie digitale, Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, agence digitale',
   ogType = 'website',
   ogImage = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop',
   canonical,
