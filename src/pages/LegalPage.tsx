@@ -27,7 +27,7 @@ export function LegalPage() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="text-[14px] sm:text-[16px] md:text-[17px] text-gray-600 leading-relaxed"
           >
-            Dernière mise à jour : 4 novembre 2025
+            Dernière mise à jour : avril 2026
           </motion.p>
         </div>
       </section>
@@ -49,7 +49,10 @@ export function LegalPage() {
                 Le site web Boost Activity est édité par :
               </p>
               <ul className="space-y-2 text-[16px] mb-4">
-                <li><strong>Société :</strong> Boost Activity SAS</li>
+                <li><strong>Raison sociale :</strong> Boost Activity — Entrepreneur individuel</li>
+                <li><strong>SIREN :</strong> 850 973 686</li>
+                <li><strong>SIRET :</strong> 850 973 686 00049</li>
+                <li><strong>APE :</strong> 73.11Z — Activités des agences de publicité</li>
                 <li><strong>Siège social :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
                 <li><strong>Email :</strong> contact@boostactivity.fr</li>
               </ul>
@@ -76,7 +79,7 @@ export function LegalPage() {
             <div>
               <h2 className="text-[32px] tracking-tight text-black mb-4">4. Propriété intellectuelle</h2>
               <p className="text-[17px] leading-relaxed mb-4">
-                L'ensemble du contenu de ce site (textes, images, vidéos, logos, icônes, etc.) est la propriété exclusive de Boost Activity SAS ou de ses partenaires.
+                L'ensemble du contenu de ce site (textes, images, vidéos, logos, icônes, etc.) est la propriété exclusive de Boost Activity ou de ses partenaires.
               </p>
               <p className="text-[17px] leading-relaxed">
                 Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces différents éléments est strictement interdite sans l'accord écrit de Boost Activity.

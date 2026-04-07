@@ -137,11 +137,6 @@ export const websiteSchema = {
       url: 'https://boostactivity.fr/logo.png',
     },
   },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://boostactivity.fr/search?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 export const breadcrumbSchema = (items: { name: string; url: string }[]) => ({

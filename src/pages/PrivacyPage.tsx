@@ -62,7 +62,7 @@ export function PrivacyPage() {
                 Le responsable du traitement de vos données personnelles est :
               </p>
               <ul className="space-y-2 text-[16px] mb-4">
-                <li><strong>Société :</strong> Boost Activity SAS</li>
+                <li><strong>Société :</strong> Boost Activity</li>
                 <li><strong>Siège social :</strong> 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
                 <li><strong>Email :</strong> contact@boostactivity.fr</li>
                 <li><strong>WhatsApp :</strong> <a href="https://wa.me/33660968516" className="text-black underline">Nous contacter</a></li>
@@ -195,7 +195,7 @@ export function PrivacyPage() {
               </p>
               <ul className="space-y-2 text-[16px] mb-4">
                 <li><strong>Email :</strong> contact@boostactivity.fr</li>
-                <li><strong>Courrier :</strong> Boost Activity SAS - Service DPO, 2 Bis Rue Jules César, 78420 Carrières-sur-Seine</li>
+                <li><strong>Courrier :</strong> Boost Activity - Service DPO, 2 Bis Rue Jules César, 78420 Carrières-sur-Seine</li>
               </ul>
               <p className="text-[17px] leading-relaxed">
                 Nous nous engageons à répondre dans un délai d'un mois. Vous disposez également du droit 
@@ -251,7 +251,7 @@ export function PrivacyPage() {
               <ul className="space-y-2 text-[16px] mb-6">
                 <li><strong>Email :</strong> contact@boostactivity.fr</li>
                 <li><strong>WhatsApp :</strong> <a href="https://wa.me/33660968516" className="text-black underline">Nous contacter</a></li>
-                <li><strong>Adresse :</strong> Boost Activity SAS, 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
+                <li><strong>Adresse :</strong> Boost Activity, 2 Bis Rue Jules César, 78420 Carrières-sur-Seine, France</li>
               </ul>
               
               <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-200">
