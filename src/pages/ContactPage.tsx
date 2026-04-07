@@ -8,7 +8,7 @@ import { Label } from '../components/ui/label';
 import { Button } from '../components/ui/button';
 import { GradientBackground } from '../components/GradientBackground';
 import { FloatingShapes } from '../components/FloatingShapes';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { SEO } from '../components/SEO';
 import { breadcrumbSchema } from '../utils/seo/schemas';
 
@@ -34,31 +34,40 @@ export function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const subject = encodeURIComponent(`Nouvelle demande - ${formData.firstName} ${formData.lastName}`);
-      const body = encodeURIComponent(
-        `Nom: ${formData.firstName} ${formData.lastName}\n` +
-        `Email: ${formData.email}\n` +
-        `Téléphone: ${formData.phone || 'Non renseigné'}\n` +
-        `Entreprise: ${formData.company || 'Non renseigné'}\n` +
-        `Budget: ${formData.budget || 'Non renseigné'}\n\n` +
-        `Message:\n${formData.message}`
-      );
-
-      window.location.href = `mailto:contact@boostactivity.fr?subject=${subject}&body=${body}`;
-
-      toast.success('Votre client mail va s\'ouvrir. Vous pouvez aussi nous écrire directement à contact@boostactivity.fr');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        budget: '',
+      const response = await fetch('https://formspree.io/f/xpwzzgkv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone || 'Non renseigné',
+          company: formData.company || 'Non renseigné',
+          budget: formData.budget || 'Non renseigné',
+          message: formData.message,
+        }),
       });
+
+      if (response.ok) {
+        toast.success('Votre message a bien été envoyé ! Nous vous répondrons sous 24h.');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+          budget: '',
+        });
+      } else {
+        toast.error('Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@boostactivity.fr');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Impossible d\'ouvrir votre client mail. Écrivez-nous à contact@boostactivity.fr');
+      toast.error('Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@boostactivity.fr');
     } finally {
       setIsSubmitting(false);
     }
@@ -401,7 +410,7 @@ export function ContactPage() {
             className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.5847884931443!2d2.1666874!3d48.9094429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6656c4c4c4c4d%3A0x4c4c4c4c4c4c4c4c!2s2%20Bis%20Rue%20Jules%20C%C3%A9sar%2C%2078420%20Carri%C3%A8res-sur-Seine!5e0!3m2!1sfr!2sfr!4v1732547000000!5m2!1sfr!2sfr"
+              src="https://maps.google.com/maps?q=2+Bis+Rue+Jules+Cesar,+78420+Carrieres-sur-Seine&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}

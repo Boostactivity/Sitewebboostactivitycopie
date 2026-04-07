@@ -78,6 +78,9 @@ export const Header = memo(function Header() {
     { label: 'Études de cas', path: '/case-studies' },
     { label: 'Tarifs', path: '/pricing' },
     { label: 'À propos', path: '/about' },
+    { label: 'FAQ', path: '/faq' },
+    { label: 'Blog', path: '/blog' },
+    { label: 'Ressources', path: '/resources' },
   ];
 
   return (

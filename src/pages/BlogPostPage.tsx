@@ -7,7 +7,7 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Calendar, Clock, ArrowLeft, Share2, Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { getBlogPostBySlug, getRelatedPosts } from '../data/blogPosts';
 import { generateArticleSchema } from '../utils/seo/schemas';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();

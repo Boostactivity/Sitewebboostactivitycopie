@@ -29,7 +29,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boostactivity.fr/services/audience-engagement</loc>
+    <loc>https://boostactivity.fr/services/branding</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boostactivity.fr/services/creation-web</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -47,13 +53,25 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boostactivity.fr/services/recompenses-reconnaissance</loc>
+    <loc>https://boostactivity.fr/services/emailing-crm</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boostactivity.fr/services/automatisation-ia</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://boostactivity.fr/services/drop-eats</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boostactivity.fr/services/audience-engagement</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -67,25 +85,19 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://boostactivity.fr/solutions/e-commerce</loc>
+    <loc>https://boostactivity.fr/solutions/restaurants-hotellerie</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boostactivity.fr/solutions/restaurant</loc>
+    <loc>https://boostactivity.fr/solutions/commerces-ecommerce</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boostactivity.fr/solutions/services-professionnels</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://boostactivity.fr/solutions/sante-bien-etre</loc>
+    <loc>https://boostactivity.fr/solutions/fitness-bien-etre</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -97,7 +109,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boostactivity.fr/solutions/btob</loc>
+    <loc>https://boostactivity.fr/solutions/b2b-services</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boostactivity.fr/solutions/sante-liberaux</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -147,7 +165,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Pricing -->
+  <!-- Pricing / Tarifs -->
   <url>
     <loc>https://boostactivity.fr/pricing</loc>
     <lastmod>2026-04-08</lastmod>

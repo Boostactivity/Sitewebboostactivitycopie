@@ -181,8 +181,8 @@ export function SolutionsPage() {
             {[
               { value: '+150%', label: 'Croissance moyenne du trafic' },
               { value: '+85%', label: 'Augmentation des conversions' },
-              { value: '4.2x', label: 'ROI moyen sur 12 mois' },
-              { value: '94%', label: 'Taux de satisfaction client' },
+              { value: '3x', label: 'ROI moyen sur 12 mois' },
+              { value: '100%', label: 'Taux de satisfaction client' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

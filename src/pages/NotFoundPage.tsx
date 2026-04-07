@@ -146,7 +146,7 @@ export function NotFoundPage() {
             <p>
               <strong>Erreur 404 :</strong> Cette page n'existe pas sur boostactivity.fr. 
               Si vous pensez qu'il s'agit d'une erreur, veuillez nous contacter. 
-              Boost Activity est une agence de marketing digital à Paris spécialisée en SEO, 
+              Boost Activity est une agence de marketing digital en Île-de-France spécialisée en SEO, 
               Google Ads, réseaux sociaux et stratégie digitale pour PME et startups.
             </p>
           </div>
